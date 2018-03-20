@@ -49,8 +49,10 @@
        ['valign'=>'center', 'halign'=>'center'],
        ['valign'=>'center', 'halign'=>'center'],
        ['valign'=>'center', 'halign'=>'center'],
-       ['valign'=>'center', 'halign'=>'center', 'border'=>'left,top', 'fill'=>'#D3FEE8',],
-       ['valign'=>'center', 'halign'=>'center', 'border'=>'right,top', 'fill'=>'#D3FEE8',] 
+       ['valign'=>'center', 'halign'=>'center', 'border'=>'left,top',
+         'fill'=>'#D3FEE8', 'font-style'=>'bold'],
+       ['valign'=>'center', 'halign'=>'center', 'border'=>'right,top',
+         'fill'=>'#D3FEE8','font-style'=>'bold'] 
     );
 
     drawBusiness($writer, $business, $rowOptions);
@@ -132,7 +134,7 @@
     );
   }
   
-  function drawDate(&$writer, &$rowOptions) {
+  function drawDate(&$writer,$rowOptions) {
     $today = date("Y-m-d H:i:s");
 
     $writer->writeSheetRow(
