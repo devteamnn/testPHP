@@ -1,5 +1,4 @@
-<?php
-
+<?php 
 require_once 'external_scripts/xlsxwriter.class.php';
 
 function remainsMakeXlsx($data) {
@@ -7,21 +6,21 @@ function remainsMakeXlsx($data) {
   //  -------- Функции, формирующие документ --------
   function setupHeader(&$writer) {
     $header = array(
-      ''=>'string',
-      ''=>'string',
-      ''=>'string',
-      ''=>'string',
-      ''=>'string',
-      ''=>'string',
-      ''=>'string',
-      ''=>'string',
-      ''=>'string',
-      ''=>'string'
+      ' '=>'@',
+      '  '=>'@',
+      '   '=>'@',
+      '    '=>'@',
+      '     '=>'@',
+      '      '=>'@',
+      '       '=>'@',
+      '        '=>'@',
+      '         '=>'@',
+      '          '=>'@'
     );
     
     $col_options = ['widths'=>[6, 18, 24, 12, 12, 12, 12, 12, 12, 12]];
 
-    $writer->writeSheetHeader('Sheet1', $header, $col_options);
+    $writer->writeSheetHeader('Sheet1',$header, $col_options);
   }
   
   function drawInfo(&$writer, $business, $stock) {
@@ -99,7 +98,6 @@ function remainsMakeXlsx($data) {
       $groupTotal = 0;
 
       drawGroupName($writer, $group['group_name']);
-
       foreach ($group['group_content'] as $key => $row) {
         calcVariableCol($row);
 
@@ -215,7 +213,6 @@ function remainsMakeXlsx($data) {
       ['valign'=>'center', 'halign'=>'center', 'border'=>'right']
     ];
      
-    var_dump($row);
     
     $writer->writeSheetRow(
       'Sheet1',
@@ -292,10 +289,8 @@ function remainsMakeXlsx($data) {
 //  -------- MAIN :) --------
   
   $writer = new XLSXWriter();
-
-  setupHeader($writer);
-  
-  if (isset($data['stock_name'])) {
+    setupHeader($writer);
+    if (isset($data['stock_name'])) {
     $stock = $data['stock_name'];
   } else {
     $stock = '';
@@ -303,6 +298,7 @@ function remainsMakeXlsx($data) {
   
   drawInfo($writer, $data['business_name'], $stock);
   drawTableHeader($writer);
+  
   $total = drawData($writer, $data);
   drawSpace($writer);
   drawTotal($writer, $total);
