@@ -3,6 +3,14 @@
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
 
+  function validate_parametr($str, $parmetr) {
+    if (strpos($str, $parmetr) === false) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+  
   require_once 'remains_make_xlsx.php';
   
   $data = [
@@ -51,4 +59,7 @@
       ]
   ];
   
-  remainsMakeXlsx($data);
+  $par = '[p02,p03,p05,p06]';
+  
+  echo remainsMakeXlsx($data, '11', $par);
+  
