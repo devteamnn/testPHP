@@ -62,4 +62,3 @@
   $par = '[p02,p03,p05,p06]';
   
   echo remainsMakeXlsx($data, '11', $par);
-  
