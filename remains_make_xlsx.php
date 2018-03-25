@@ -9,16 +9,16 @@ function remainsMakeXlsx($data, $directory, $par) {
   //  -------- Функции, формирующие документ --------
   function setupHeader(&$writer) {
     $header = array(
-      ' '=>'@',
-      '  '=>'@',
-      '   '=>'@',
-      '    '=>'@',
-      '     '=>'@',
-      '      '=>'@',
-      '       '=>'@',
-      '        '=>'@',
-      '         '=>'@',
-      '          '=>'@'
+      ' '=>'integer',
+      '  '=>'integer',
+      '   '=>'integer',
+      '    '=>'integer',
+      '     '=>'integer',
+      '      '=>'integer',
+      '       '=>'integer',
+      '        '=>'integer',
+      '         '=>'integer',
+      '          '=>'integer'
     );
     
     $col_options = ['widths'=>[6, 18, 24, 12, 12, 12, 12, 12, 12, 12]];
@@ -268,7 +268,7 @@ function remainsMakeXlsx($data, $directory, $par) {
   }
   
   function drawRow(&$writer, $index, $row, $par) {
-     $rowOptions = 
+      $rowOptions = 
      [
       'height'=>20,
       ['valign'=>'center', 'halign'=>'center', 'border'=>'left,right'],
@@ -291,25 +291,25 @@ function remainsMakeXlsx($data, $directory, $par) {
     $cools = array(
       $index,
       (isset($row['barcode'])) ? $row['barcode'] : '',
-      $row['good_name'],
-        $row['good_count']
+        $row['good_name'],
+        (float) number_format((float) $row['good_count'], 2, ',', '')
     );
-    
+   
     if (validate_parametr($par, 'p04')) {
-      $cools[] = (isset($row['price_purchase'])) ? $row['price_purchase'] : '';
+      $cools[] = (isset($row['price_purchase'])) ? (float) number_format((float) $row['price_purchase'] , 2, ',', '') : '';
     }
     if (validate_parametr($par, 'p05')) {
-      $cools[] = (isset($row['price_sell'])) ? $row['price_sell'] : '';
+      $cools[] = (isset($row['price_sell'])) ? (float) number_format((float) $row['price_sell'] , 2, ',', '') : '';
     }
     if (validate_parametr($par, 'p02')) {
-      $cools[] = (isset($row['purchase_sum'])) ? $row['purchase_sum'] : '';
+      $cools[] = (isset($row['purchase_sum'])) ? (float) number_format((float) $row['purchase_sum'] , 2, ',', '') : '';
     }
     if (validate_parametr($par, 'p03')) {
-      $cools[] = (isset($row['sell_sum'])) ? $row['sell_sum'] : '';
+      $cools[] = (isset($row['sell_sum'])) ? (float) number_format((float) $row['sell_sum'] , 2, ',', '') : '';
     }
     if (validate_parametr($par, 'p01')) {
-      $cools[] = (isset($row['count_delivery_1'])) ? $row['count_delivery_1'] : '';
-      $cools[] = (isset($row['count_delivery_2'])) ? $row['count_delivery_2'] : '';
+      $cools[] = (isset($row['count_delivery_1'])) ? (float) number_format((float) $row['count_delivery_1'] , 2, ',', '') : '';
+      $cools[] = (isset($row['count_delivery_2'])) ? (float) number_format((float) $row['count_delivery_2'] , 2, ',', '') : '';
     }
     
     $writer->writeSheetRow(
