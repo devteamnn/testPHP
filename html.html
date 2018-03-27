@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		<meta charset="utf-8">
+	</title>
+	<style type="text/css">
+		* {
+			font-family: "DejaVuSans";
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		td, th {
+			padding: 5px;
+		}
+
+		th {
+			border: 1px solid black;
+		}
+
+		.header {
+			background-color: #D3FEE8;
+			font-weight: bold;
+			color: #004200;
+			font-size: 16px;
+		}
+
+		.group {
+			font-weight: bold;
+			background-color: #E5E5E5;
+			border: 1px solid black;
+			font-size: 16px;
+		}
+
+		.col {
+			border-left: 1px solid black;
+			border-right: 1px solid black;
+			font-size: 14px;
+		}
+
+		.subtotal {
+			border: 1px solid black;
+			font-weight: bold;
+			color: #004200;
+			font-size: 16px;
+		}
+
+		.subtotal-col {
+			border-left: 1px solid black;
+			border-right: 1px solid black;
+			font-size: 16px;
+		}
+
+		.total {
+			background-color: #D3FEE8;
+			margin-top: 16px;
+			border: 1px solid black;
+			font-weight: bold;
+			color: #004200;
+			font-size: 16px;
+		}
+
+		.subtotal-col {
+			border-left: 1px solid black;
+			border-right: 1px solid black;
+			font-size: 16px;
+		}
+
+		.space {
+			height: 20px;
+		}
+
+		col {
+			width: 300px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<table>
+		<col>
+		<col>
+		<col>
+		<col>
+		<col>
+		<col>
+		<col>
+		<col>
+		<col>
+		<col>
+		<thead class="header">
+			<tr>
+				<th rowspan="2">№</th>
+				<th rowspan="2">Группа</th>
+				<th rowspan="2">Наименование</th>
+				<th rowspan="2">Количество</th>
+				<th rowspan="2">Текущая цена закупки</th>
+				<th rowspan="2">Текущая цена продажи</th>
+				<th rowspan="2">На сумму по закупке</th>
+				<th rowspan="2">На сумму по продаже</th>
+				<th colspan="2">Доставка</th>
+			</tr>
+			<tr>		
+				<th>Ожидает<br>поступления на<br>склад</th>
+				<th>Ожидает<br>отправки<br>получателю</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<!-- Группа -->
+			<tr class="group">
+				<td></td>
+				<td>Группа:</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<!-- Товары -->
+			<tr>
+				<td class="col">1</td>
+				<td class="col">Ширихкод</td>
+				<td class="col">НазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазвание</td>
+				<td class="col">10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+			</tr>
+			<tr>
+				<td class="col">1</td>
+				<td class="col">Ширихкод</td>
+				<td class="col">Название</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+			</tr>
+			<tr>
+				<td class="col">1</td>
+				<td class="col">Ширихкод</td>
+				<td class="col">Название</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+			</tr>
+			<tr>
+				<td class="col">1</td>
+				<td class="col">Ширихкод</td>
+				<td class="col">Название</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+				<td class="col">10000.00</td>
+			</tr>
+
+
+
+			<!-- Подытог -->
+			<tr class="subtotal">
+				<td></td>
+				<td>Подытог:	</td>
+				<td></td>
+				<td class="subtotal-col">10000.00</td>
+				<td></td>
+				<td></td>
+				<td class="subtotal-col">10000.00</td>
+				<td class="subtotal-col">10000.00</td>
+				<td class="subtotal-col">10000.00</td>
+				<td class="subtotal-col">10000.00</td>
+			</tr>
+		</tbody>
+		<tr class="space"></tr>
+		<tfoot class="total">
+			<!-- Итог -->
+			<td></td>
+			<td>Итого:</td>
+			<td></td>
+			<td class="subtotal-col">10000.00</td>
+			<td></td>
+			<td></td>
+			<td class="subtotal-col">10000.00</td>
+			<td class="subtotal-col">10000.00</td>
+			<td class="subtotal-col">10000.00</td>
+			<td class="subtotal-col">10000.00</td>
+		</tfoot>
+	</table>
+
+</body>
+</html>
+
+<!--  /var/www/html/external_scripts/wkhtmltox/bin/wkhtmltopdf --encoding utf-8 html.html test.pdf -->
