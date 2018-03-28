@@ -12,13 +12,14 @@
       return true;
     }
   }
-  
+
   require_once 'remains_make_xlsx.php';
-  // require_once 'remains_make_pdf.php';
-  
+  require_once 'remains_make_pdf.php';
+
   $data = [
- 
+
       "business_name"=>"klop22322",
+      "stock_name"=>"базар",
       "current_time"=>1521443363,
       "content"=>[
         [
@@ -58,12 +59,12 @@
                 "price_purchase"=>"30.000","price_sell"=>"36.000"]
 
           ]
-        ]     
+        ]
       ]
   ];
-  
-  $par = '[p02,p03,p04,p05,p06]';
-  
-  echo remainsMakeXlsx($data, '11', $par);
-  // echo remainsMakePdf($data, '111', $par);
- 
+
+  $par = '[p01,p02,p03,p04,p05,p06]';
+
+  // echo remainsMakeXlsx($data, '11', $par);
+  echo remainsMakePdf($data, '111', $par);
+

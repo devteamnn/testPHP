@@ -4,16 +4,28 @@
 		"selected_items":
 		[
 			[
+				"fun",
+				"fun\tfunction …"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"l",
+				"li\tTag"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
 				"co",
 				"col\tTag"
 			],
 			[
 				"font-si",
 				"font-size-adjust"
-			],
-			[
-				"marg",
-				"margin-top"
 			],
 			[
 				"font",
@@ -42,10 +54,6 @@
 			[
 				"me",
 				"meta\tTag"
-			],
-			[
-				"fun",
-				"create_function"
 			],
 			[
 				"ge",
@@ -248,10 +256,6 @@
 				"login"
 			],
 			[
-				"l",
-				"loginData"
-			],
-			[
 				"doc",
 				"document"
 			]
@@ -263,17 +267,28 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 2616,
+				"buffer_size": 2628,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "<?php\nrequire_once 'external_scripts/tfpdf/tfpdf.php';\nrequire_once 'markup/remains--make-pdf.php';\n\n\n//ini_set('error_reporting', E_ALL);\n//ini_set('display_errors', 1);\n//ini_set('display_startup_errors', 1);\n\nfunction remainsMakePdf($data, $directory, $par) {\n  \n  $htmlDoc = markupDrawDocHeader($data['business_name'], $data['stock_name'])\n\n\n\n  return $htmlDoc;\n}\n",
 			"file": "remains_make_pdf.php",
+			"file_size": 338,
+			"file_write_time": 131666999691393294,
 			"settings":
 			{
-				"buffer_size": 1585,
+				"buffer_size": 368,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "data",
+			"settings":
+			{
+				"buffer_size": 24686,
 				"line_ending": "Windows"
 			}
 		},
@@ -287,12 +302,24 @@
 			}
 		},
 		{
+			"contents": "<!DOCTYPE html>\n<html>\n<head>\n\t<title>\n\t\t<meta charset=\"utf-8\">\n\t</title>\n\t<style type=\"text/css\">\n\t\t* {\n\t\t\tfont-family: \"DejaVuSans\";\n\t\t}\n\n\t\ttable {\n\t\t\tborder-collapse: collapse;\n\n\t\t}\n\n\t\ttd, th {\n\t\t\tpadding: 5px;\n\t\t}\n\n\t\tth {\n\t\t\tborder: 1px solid black;\n\t\t}\n\n\t\ttd {\n\t\t\tvertical-align: top;\n\t\t}\n\n\t\t.header {\n\t\t\tbackground-color: #D3FEE8;\n\t\t\tfont-weight: bold;\n\t\t\tcolor: #004200;\n\t\t\tfont-size: 16px;\n\t\t}\n\n\t\t.group {\n\t\t\tfont-weight: bold;\n\t\t\tbackground-color: #E5E5E5;\n\t\t\tborder: 1px solid black;\n\t\t\tfont-size: 16px;\n\t\t}\n\n\t\t.col {\n\t\t\tborder-left: 1px solid black;\n\t\t\tborder-right: 1px solid black;\n\t\t\tfont-size: 14px;\n\t\t\tword-break: break-all;\n\t\t}\n\n\t\t.subtotal {\n\t\t\tborder: 1px solid black;\n\t\t\tfont-weight: bold;\n\t\t\tcolor: #004200;\n\t\t\tfont-size: 16px;\n\t\t}\n\n\t\t.subtotal-col {\n\t\t\tborder-left: 1px solid black;\n\t\t\tborder-right: 1px solid black;\n\t\t\tfont-size: 16px;\n\t\t}\n\n\t\t.total {\n\t\t\tbackground-color: #D3FEE8;\n\t\t\tmargin-top: 16px;\n\t\t\tborder: 1px solid black;\n\t\t\tfont-weight: bold;\n\t\t\tcolor: #004200;\n\t\t\tfont-size: 16px;\n\t\t}\n\n\t\t.subtotal-col {\n\t\t\tborder-left: 1px solid black;\n\t\t\tborder-right: 1px solid black;\n\t\t\tfont-size: 16px;\n\t\t}\n\n\t\t.space {\n\t\t\theight: 20px;\n\t\t}\n\n\t\tul li {\n\t\t\tlist-style-type: none;\n\t\t\tmargin-bottom: 15px;\n\t\t\tfont-size: 16px;\n\t\t}\t\n\n\t</style>\n</head>\n<body>\n\t<h2>Bidone shop</h1>\n\n\t<ul>\n\t\t<li>Предприятие ХХХХХХХХХХХХХХХХХХХХ</li>\n\t\t<li>Точка продажи ХХХХХХХХХХХХХХХХХХХХ</li>\n\t</ul>\n\n\t<table>\n\n    <!-- ____________________________ -->\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<thead class=\"header\">\n\t\t\t<tr>\n\t\t\t\t<th rowspan=\"2\">№</th>\n\t\t\t\t<th rowspan=\"2\">Группа</th>\n\t\t\t\t<th rowspan=\"2\">Наименование</th>\n\t\t\t\t<th rowspan=\"2\">Количество</th>\n\t\t\t\t<th rowspan=\"2\">Текущая цена закупки</th>\n\t\t\t\t<th rowspan=\"2\">Текущая цена продажи</th>\n\t\t\t\t<th rowspan=\"2\">На сумму по закупке</th>\n\t\t\t\t<th rowspan=\"2\">На сумму по продаже</th>\n\t\t\t\t<th colspan=\"2\">Доставка</th>\n\t\t\t</tr>\n\t\t\t<tr>\t\t\n\t\t\t\t<th>Ожидает<br>поступления на<br>склад</th>\n\t\t\t\t<th>Ожидает<br>отправки<br>получателю</th>\n\t\t\t</tr>\n\t\t</thead>\n\t\t<tbody>\n\n\t\t\t<!-- Группа -->\n\t\t\t<tr class=\"group\">\n\t\t\t\t<td></td>\n\t\t\t\t<td>Группа:</td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t</tr>\n\n\t\t\t<!-- Товары -->\n\t\t\t<tr>\n\t\t\t\t<td class=\"col\">1</td>\n\t\t\t\t<td class=\"col\">ШирихкодШирихкодШирихкодШирихкодШирихкод</td>\n\t\t\t\t<td class=\"col\">НазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазвание</td>\n\t\t\t\t<td class=\"col\">10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td class=\"col\">1</td>\n\t\t\t\t<td class=\"col\">Ширихкод</td>\n\t\t\t\t<td class=\"col\">Название</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td class=\"col\">1</td>\n\t\t\t\t<td class=\"col\">Ширихкод</td>\n\t\t\t\t<td class=\"col\">Название</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td class=\"col\">1</td>\n\t\t\t\t<td class=\"col\">Ширихкод</td>\n\t\t\t\t<td class=\"col\">Название</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t</tr>\n\n\n\n\t\t\t<!-- Подытог -->\n\t\t\t<tr class=\"subtotal\">\n\t\t\t\t<td></td>\n\t\t\t\t<td>Подытог:\t</td>\n\t\t\t\t<td></td>\n\t\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t</tr>\n\t\t</tbody>\n\t\t<tr class=\"space\"></tr>\n\t\t<tfoot class=\"total\">\n\t\t\t<!-- Итог -->\n\t\t\t<td></td>\n\t\t\t<td>Итого:</td>\n\t\t\t<td></td>\n\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t<td></td>\n\t\t\t<td></td>\n\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t</tfoot>\n\t</table>\n\n</body>\n</html>\n\n<!--  /var/www/html/external_scripts/wkhtmltox/bin/wkhtmltopdf --encoding utf-8 html.html test.pdf -->",
 			"file": "html.html",
+			"file_size": 6751,
+			"file_write_time": 131666974431408367,
 			"settings":
 			{
-				"buffer_size": 4586,
+				"buffer_size": 5500,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "markup/remains--make-pdf.php",
+			"settings":
+			{
+				"buffer_size": 1954,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -341,10 +368,13 @@
 	},
 	"expanded_folders":
 	[
-		"/D/USERS/kds/Documents/DEV/testPHP"
+		"/D/USERS/kds/Documents/DEV/testPHP",
+		"/D/USERS/kds/Documents/DEV/testPHP/markup"
 	],
 	"file_history":
 	[
+		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/D/USERS/kds/Documents/DEV/testPHP/markup/remains--makepdf-header.php",
 		"/D/USERS/kds/Desktop/html.html",
 		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
 		"/D/USERS/kds/Documents/DEV/testPHP/sftp-config.json",
@@ -470,9 +500,7 @@
 		"/D/USERS/kds/Documents/DEV/lopos/build/js/login.js",
 		"/D/USERS/kds/Documents/DEV/lopos/js/xhr.js",
 		"/D/USERS/kds/Documents/DEV/lopos/login.html",
-		"/D/USERS/kds/Documents/DEV/lopos/index.html",
-		"/D/USERS/kds/Documents/DEV/lopos/js/script.js",
-		"/D/USERS/kds/Documents/DEV/lopos/build/js/script.js"
+		"/D/USERS/kds/Documents/DEV/lopos/index.html"
 	],
 	"find":
 	{
@@ -709,7 +737,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -718,15 +746,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2616,
+						"buffer_size": 2628,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								324,
-								324
+								323,
+								323
 							]
 						],
 						"settings":
@@ -745,13 +773,86 @@
 							"SL.41.region_keys":
 							[
 							],
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"spell_check": false,
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 57.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "remains_make_pdf.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 368,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								345,
+								345
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "data",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 24686,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1020,
+								1020
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -761,36 +862,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "remains_make_pdf.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1585,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								218,
-								218
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "remains_make_xlsx.php",
 					"semi_transient": false,
 					"settings":
@@ -808,50 +880,93 @@
 						],
 						"settings":
 						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5714.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "html.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4586,
+						"buffer_size": 5500,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								838,
-								838
+								1484,
+								1484
 							]
 						],
 						"settings":
 						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 741.0,
+						"translation.y": 1634.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "markup/remains--make-pdf.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1954,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16,
+								35
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
