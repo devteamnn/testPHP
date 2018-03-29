@@ -1,5 +1,5 @@
 <?php
-	function markupDrawDocHeader($business, $stock){
+	function markupDrawDocHeader($business, $stock, $date){
     return <<<EOL
     <html>
     <head>
@@ -18,6 +18,7 @@
 
         td, th {
           padding: 5px;
+          text-align: center;
         }
 
         th {
@@ -87,6 +88,11 @@
           font-size: 16px;
         }
 
+        .date {
+          font-weight: bold;
+          font-size: 18px;
+        }
+
       </style>
     </head>
     <body>
@@ -95,6 +101,7 @@
       <ul>
         <li>Предприятие $business</li>
         <li>Точка продажи $stock</li>
+        <li class="date">Остатки товара $date</li>
       </ul>
 
       <table>
@@ -143,5 +150,29 @@ function markupGroupTotal($goodCount) {
         <td class="subtotal-col">$goodCount</td>
         <td></td>
         <td></td>
+EOL;
+}
+
+function markupTotal($count, $totalPurchase, $totalSell, $cntDlvr1, $cntDlvr2) {
+  return <<<EOL
+        </tbody>
+        <tr class="space"></tr>
+        <tfoot class="total">
+          <td></td>
+          <td>Итого:</td>
+          <td></td>
+          <td class="subtotal-col">$count</td>
+          <td></td>
+          <td></td>
+          <td class="subtotal-col">$totalPurchase</td>
+          <td class="subtotal-col">$totalSell</td>
+          <td class="subtotal-col">$cntDlvr1</td>
+          <td class="subtotal-col">$cntDlvr2</td>
+        </tfoot>
+      </table>
+
+    </body>
+    </html>
+
 EOL;
 }

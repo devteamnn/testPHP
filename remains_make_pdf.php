@@ -77,6 +77,45 @@ function remainsMakePdf($data, $directory, $par) {
     return $total;
   }
 
+  function drawTotal(&$total, &$par) {
+    $row = markupGroupTotal($grpTotal['count']);
+
+    if (validate_parametr($par, 'p02')) {
+      $row .= '<td class="subtotal-col">' . $grpTotal['totalPurchase'] . '</td>';
+    }
+    if (validate_parametr($par, 'p03')) {
+     $row .= '<td class="subtotal-col">' . $grpTotal['totalSell'] . '</td>';
+    }
+    if (validate_parametr($par, 'p01')) {
+      $row .= '<td class="subtotal-col">' . $grpTotal['cntDlvr1'] . '</td>';
+      $row .= '<td class="subtotal-col">' . $grpTotal['cntDlvr2'] . '</td>';
+    }
+
+    $row .= '</tr>';
+
+    return $row;
+  }
+
+  function writeFile($name, &$htmlCode) {
+    $tmpName = $name . '.html';
+
+    $file = fopen($tmpName, 'w+');
+    fputs($file, $htmlCode);
+    fclose($file);
+
+    $cmd = 'external_scripts/wkhtmltox/bin/wkhtmltopdf --encoding utf-8 -O Landscape '
+      . $tmpName . ' ' . $name ;
+
+    exec($cmd);
+    unlink($tmpName);
+
+    if (file_exists($name)) {
+      return true;
+    }
+
+    return false;
+  }
+
   // ----------------------------------------
 
   function calcVariableCol(&$row) {
@@ -117,52 +156,52 @@ function remainsMakePdf($data, $directory, $par) {
   }
 
   function drawRow($index, $rowData, &$par) {
-    $row = '<tr><td>' . $index . '</td>';
+    $row = '<tr><td class="col">' . $index . '</td>';
 
     $var = isset($rowData['barcode']) ?  $rowData['barcode'] : '';
-    $row .= '<td>' . $var . '</td>';
+    $row .= '<td class="col">' . $var . '</td>';
 
-    $row .= '<td>' . $rowData['good_name'] . '</td>';
+    $row .= '<td class="col">' . $rowData['good_name'] . '</td>';
 
     $var = (float) number_format((float) $rowData['good_count'], 2, ',', '');
-    $row .= '<td>' . $var . '</td>';
+    $row .= '<td class="col">' . $var . '</td>';
 
     if (validate_parametr($par, 'p04')) {
       $var = isset($rowData['price_purchase']) ?
         (float) number_format((float) $rowData['price_purchase'], 2, ',', '') : '';
 
-      $row .= '<td>' . $var . '</td>';
+      $row .= '<td class="col">' . $var . '</td>';
     }
 
     if (validate_parametr($par, 'p05')) {
       $var = isset($rowData['price_sell']) ?
         (float) number_format((float) $rowData['price_sell'], 2, ',', '') : '';
 
-      $row .= '<td>' . $var . '</td>';
+      $row .= '<td class="col">' . $var . '</td>';
     }
 
     if (validate_parametr($par, 'p02')) {
       $var = isset($rowData['purchase_sum']) ?
         (float) number_format((float) $rowData['purchase_sum'], 2, ',', '') : '';
 
-      $row .= '<td>' . $var . '</td>';
+      $row .= '<td class="col">' . $var . '</td>';
     }
 
     if (validate_parametr($par, 'p03')) {
       $var = isset($rowData['sell_sum']) ?
         (float) number_format((float) $rowData['sell_sum'], 2, ',', '') : '';
 
-      $row .= '<td>' . $var . '</td>';
+      $row .= '<td class="col">' . $var . '</td>';
     }
 
     if (validate_parametr($par, 'p01')) {
       $var = isset($rowData['count_delivery_1']) ?
         (float) number_format((float) $rowData['count_delivery_1'], 2, ',', '') : '';
-      $row .= '<td>' . $var . '</td>';
+      $row .= '<td class="col">' . $var . '</td>';
 
       $var = isset($rowData['count_delivery_2']) ?
         (float) number_format((float) $rowData['count_delivery_2'], 2, ',', '') : '';
-      $row .= '<td>' . $var . '</td>';
+      $row .= '<td class="col">' . $var . '</td>';
     }
 
     $row .= '</tr>';
@@ -189,9 +228,41 @@ function remainsMakePdf($data, $directory, $par) {
     return $row;
   }
 
+  function getFileName($prefix, $date, $type) {
+    function getRnd() {
+      $genName = '';
+      for ($i = 0; $i < 4; $i++) {
+       $gen = rand(0, 9);
+       $genName .= $gen;
+      }
+      return $genName;
+    }
+    //    -----------------------------
+    $date = date('d_m', $date);
+    $name = $prefix . '_' . $date . '_';
+
+    $count = 0;
+
+    do {
+      $number = getRnd();
+      $name .= $number;
+      $count ++;
+
+      if ($count > 100000) {
+        break;
+      }
+
+    } while (file_exists($name));
+
+    $name .= '.' . $type;
+
+    return $name;
+  }
 
   // ---------- MAIN ----------
-  $htmlDoc = markupDrawDocHeader($data['business_name'], $data['stock_name']);
+  $date = date("Y-m-d H:i:s", $data['current_time']);
+  $htmlDoc = markupDrawDocHeader($data['business_name'], $data['stock_name'],
+    $date);
 
   $tableHeader = drawTableHeader($par);
 
@@ -202,5 +273,14 @@ function remainsMakePdf($data, $directory, $par) {
 
   $total = drawData($htmlDoc, $data, $par);
 
-  return $htmlDoc;
+  $htmlDoc .= markupTotal($total['count'], $total['totalPurchase'],
+    $total['totalSell'], $total['cntDlvr1'], $total['cntDlvr2']);
+
+  $name = getFileName('remains', $data['current_time'], 'pdf');
+
+  if (writeFile($name, $htmlDoc)) {
+    return $name;
+  }
+
+  return false;
 }
