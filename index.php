@@ -13,8 +13,10 @@
     }
   }
 
-  require_once 'remains_make_xlsx.php';
-  require_once 'remains_make_pdf.php';
+
+
+  require_once 'make_reports/remains_make_xlsx.php';
+  require_once 'make_reports/remains_make_pdf.php';
 
   $data = [
 
@@ -65,6 +67,6 @@
 
   $par = '[p01,p02,p03,p04,p05,p06]';
 
-  // echo remainsMakeXlsx($data, '11', $par);
-  echo remainsMakePdf($data, '111', $par);
+  echo remainsMakeXlsx\remainsMakeXlsx($data, '11', $par);
+  echo remainsMakePdf\remainsMakePdf($data, '111', $par);
 
