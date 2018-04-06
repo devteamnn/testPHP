@@ -4,7 +4,7 @@ namespace {
   require_once 'make_reports/external_scripts/xlsxwriter.class.php';
 };
 
-namespace remainsMakeXlsx {
+namespace nameSpaceRemainsMakeXlsx {
 
   //  -------- Функции, формирующие документ --------
   function setupHeader(&$writer) {

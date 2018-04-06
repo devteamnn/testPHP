@@ -13,60 +13,23 @@
     }
   }
 
-
+  require_once 'program_data/remainsData.php';
+  require_once 'program_data/turnoverData.php';
 
   require_once 'make_reports/remains_make_xlsx.php';
   require_once 'make_reports/remains_make_pdf.php';
 
-  $data = [
 
-      "business_name"=>"klop22322",
-      "stock_name"=>"базар",
-      "current_time"=>1521443363,
-      "content"=>[
-        [
-          "group_name"=>"GGG222",
-          "group_content"=>[
+  // $data = remainsGetData();
+  // $par = '[p01,p02,p03,p04,p05,p06]';
+  // echo nameSpaceRemainsMakeXlsx\remainsMakeXlsx($data, '11', $par);
+  // echo '<br>';
+  // echo nameSpaceRemainsMakePdf\remainsMakePdf($data, '111', $par);
 
-            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
-                "price_purchase"=>"30.000","price_sell"=>"36.000"],
-            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
-                "price_purchase"=>"30.000","price_sell"=>"36.000"],
-            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
-                "price_purchase"=>"30.000","price_sell"=>"36.000"],
-            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
-                "price_purchase"=>"30.000","price_sell"=>"36.000"],
-            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
-                "price_purchase"=>"30.000","price_sell"=>"36.000"],
-            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
-                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+  $data = turnoverGetData();
+  $par = '[p01,p02]';
 
-          ]
-        ],
-        [
-          "group_name"=>"GGG222",
-          "group_content"=>[
+  var_export($data);
 
-            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
-                "price_purchase"=>"30.000","price_sell"=>"36.000"],
-            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
-                "price_purchase"=>"30.000","price_sell"=>"36.000"],
-            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
-                "price_purchase"=>"30.000","price_sell"=>"36.000"],
-            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
-                "price_purchase"=>"30.000","price_sell"=>"36.000"],
-            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
-                "price_purchase"=>"30.000","price_sell"=>"36.000"],
-            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
-                "price_purchase"=>"30.000","price_sell"=>"36.000"]
 
-          ]
-        ]
-      ]
-  ];
-
-  $par = '[p01,p02,p03,p04,p05,p06]';
-
-  echo remainsMakeXlsx\remainsMakeXlsx($data, '11', $par);
-  echo remainsMakePdf\remainsMakePdf($data, '111', $par);
 

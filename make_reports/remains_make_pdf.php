@@ -1,6 +1,6 @@
 <?php
 // для ввода в продакшн изменить путь в строках 95, 97
-namespace remainsMakePdf;
+namespace nameSpaceRemainsMakePdf;
 
 require_once 'markup/remains--make-pdf.php';
 
@@ -276,7 +276,7 @@ function remainsMakePdf($data, $directory, $par) {
   $htmlDoc .= markupTotal($total['count'], $total['totalPurchase'],
     $total['totalSell'], $total['cntDlvr1'], $total['cntDlvr2']);
 
-  $name = getFileName('remains', $data['current_time'], 'pdf');
+  $name = getFileName('Remains', $data['current_time'], 'pdf');
 
   if (writeFile($name, $directory, $htmlDoc)) {
     return $name;
