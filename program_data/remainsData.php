@@ -10,12 +10,12 @@
           "group_name"=>"GGG222",
           "group_content"=>[
 
-            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
-                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.2",
+                "price_purchase"=>"30.545","price_sell"=>"36.789"],
             ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
                 "price_purchase"=>"30.000","price_sell"=>"36.000"],
             ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
-                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+                "price_purchase"=>"30.123","price_sell"=>"36.321"],
             ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
                 "price_purchase"=>"30.000","price_sell"=>"36.000"],
             ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
@@ -43,7 +43,349 @@
                 "price_purchase"=>"30.000","price_sell"=>"36.000"]
 
           ]
-        ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
+        [
+          "group_name"=>"GGG222",
+          "group_content"=>[
+
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["barcode"=>"44444444555555566666666", "good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"],
+            ["good_id"=>"53", "good_name"=>"корзиночка","good_count"=>"7.000",
+                "price_purchase"=>"30.000","price_sell"=>"36.000"]
+
+          ]
+        ],
       ]
   ];
   }

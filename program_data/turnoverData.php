@@ -12,13 +12,13 @@
                     [
                         "good_id" => "53",
                         "good_name" => "корзиночка",
-                        "end_count" => "7.000",
-                        "st_count" => "20",
-                        "purchased_count" => "30",
-                        "purchased_sum" => "300",
-                        "sold_count" => "25",
-                        "sold_sum" => "300",
-                        "end_sum_purchase" => 210.00,
+                        "end_count" => "7.123",
+                        "st_count" => "20.556",
+                        "purchased_count" => "30.654",
+                        "purchased_sum" => "300.888",
+                        "sold_count" => "25.22",
+                        "sold_sum" => "300.888",
+                        "end_sum_purchase" => 210.123,
                         "end_sum_sell" => 252.00
                     ],
                     [

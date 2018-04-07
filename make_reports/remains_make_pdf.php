@@ -6,33 +6,33 @@ require_once 'markup/remains--make-pdf.php';
 
 function drawTableHeader(&$par) {
     $col = '<col><col><col><col>';
-    $row1 = '<th rowspan="2">№</th><th rowspan="2">Группа</th><th rowspan="2">Наименование</th><th rowspan="2">Количество</th>';
+    $row1 = '<td rowspan="2">№</td><td rowspan="2">Группа</td><td rowspan="2">Наименование</td><td rowspan="2">Количество</td>';
     $row2 = '';
 
     if (validate_parametr($par, 'p04')) {
-      $row1 .= '<th rowspan="2">Текущая цена закупки</th>';
+      $row1 .= '<td rowspan="2">Текущая цена закупки</td>';
       $col .= '<col>';
     }
     if (validate_parametr($par, 'p05')) {
-      $row1 .= '<th rowspan="2">Текущая цена продажи</th>';
+      $row1 .= '<td rowspan="2">Текущая цена продажи</td>';
       $col .= '<col>';
     }
     if (validate_parametr($par, 'p02')) {
-      $row1 .= '<th rowspan="2">На сумму по закупке</th>';
+      $row1 .= '<td rowspan="2">На сумму по закупке</td>';
       $col .= '<col>';
     }
     if (validate_parametr($par, 'p03')) {
-      $row1 .= '<th rowspan="2">На сумму по продаже</th>';
+      $row1 .= '<td rowspan="2">На сумму по продаже</td>';
       $col .= '<col>';
     }
     if (validate_parametr($par, 'p01')) {
-      $row1 .= '<th colspan="2">Доставка</th>';
-      $row2 .= '<th>Ожидает<br>поступления на<br>склад</th>';
-      $row2 .= '<th>Ожидает<br>отправки<br>получателю</th>';
+      $row1 .= '<td colspan="2">Доставка</td>';
+      $row2 .= '<td>Ожидает<br>поступления на<br>склад</td>';
+      $row2 .= '<td>Ожидает<br>отправки<br>получателю</td>';
       $col .= '<col>';
     }
 
-    $row = $row1 . '</tr><tr>' . $row2;
+    $row = '<tr class="header">' . $row1 . '</tr><tr class="header">' . $row2 . '</tr>';
 
     return ['col' => $col, 'header' => $row];
 }
@@ -56,7 +56,7 @@ function drawData(&$htmlDoc, &$data, &$par) {
       'cntDlvr2'=>0
     ];
 
-    $htmlDoc .= markupDrawGroup($group['group_name'], $par);
+    $htmlDoc .= drawGroup($group['group_name'], $par);
 
     foreach ($group['group_content'] as $key => $row) {
       calcVariableCol($row);
@@ -73,17 +73,33 @@ function drawData(&$htmlDoc, &$data, &$par) {
 }
 
 function drawTotal(&$total, &$par) {
-  $row = markupGroupTotal($grpTotal['count']);
+  $var = (float) number_format((float) $total['count'], 2, '.', '');
+  $row = markupTotal($var);
+
+  if (validate_parametr($par, 'p04')) {
+    $row .= '<td></td>';
+  }
+
+  if (validate_parametr($par, 'p05')) {
+    $row .= '<td></td>';
+  }
 
   if (validate_parametr($par, 'p02')) {
-    $row .= '<td class="subtotal-col">' . $grpTotal['totalPurchase'] . '</td>';
+    $var = (float) number_format((float) $total['totalPurchase'], 2, '.', '');
+    $row .= '<td class="subtotal-col">' . $var . '</td>';
   }
+
   if (validate_parametr($par, 'p03')) {
-   $row .= '<td class="subtotal-col">' . $grpTotal['totalSell'] . '</td>';
+    $var = (float) number_format((float) $total['totalSell'], 2, '.', '');
+    $row .= '<td class="subtotal-col">' . $var . '</td>';
   }
+
   if (validate_parametr($par, 'p01')) {
-    $row .= '<td class="subtotal-col">' . $grpTotal['cntDlvr1'] . '</td>';
-    $row .= '<td class="subtotal-col">' . $grpTotal['cntDlvr2'] . '</td>';
+    $var = (float) number_format((float) $total['cntDlvr1'], 2, '.', '');
+    $row .= '<td class="subtotal-col">' . $var . '</td>';
+
+    $var = (float) number_format((float) $total['cntDlvr2'], 2, '.', '');
+    $row .= '<td class="subtotal-col">' . $var . '</td>';
   }
 
   $row .= '</tr>';
@@ -161,44 +177,44 @@ function drawRow($index, $rowData, &$par) {
 
   $row .= '<td class="col">' . $rowData['good_name'] . '</td>';
 
-  $var = (float) number_format((float) $rowData['good_count'], 2, ',', '');
+  $var = (float) number_format((float) $rowData['good_count'], 2, '.', '');
   $row .= '<td class="col">' . $var . '</td>';
 
   if (validate_parametr($par, 'p04')) {
     $var = isset($rowData['price_purchase']) ?
-      (float) number_format((float) $rowData['price_purchase'], 2, ',', '') : '';
+      (float) number_format((float) $rowData['price_purchase'], 2, '.', '') : '';
 
     $row .= '<td class="col">' . $var . '</td>';
   }
 
   if (validate_parametr($par, 'p05')) {
     $var = isset($rowData['price_sell']) ?
-      (float) number_format((float) $rowData['price_sell'], 2, ',', '') : '';
+      (float) number_format((float) $rowData['price_sell'], 2, '.', '') : '';
 
     $row .= '<td class="col">' . $var . '</td>';
   }
 
   if (validate_parametr($par, 'p02')) {
     $var = isset($rowData['purchase_sum']) ?
-      (float) number_format((float) $rowData['purchase_sum'], 2, ',', '') : '';
+      (float) number_format((float) $rowData['purchase_sum'], 2, '.', '') : '';
 
     $row .= '<td class="col">' . $var . '</td>';
   }
 
   if (validate_parametr($par, 'p03')) {
     $var = isset($rowData['sell_sum']) ?
-      (float) number_format((float) $rowData['sell_sum'], 2, ',', '') : '';
+      (float) number_format((float) $rowData['sell_sum'], 2, '.', '') : '';
 
     $row .= '<td class="col">' . $var . '</td>';
   }
 
   if (validate_parametr($par, 'p01')) {
     $var = isset($rowData['count_delivery_1']) ?
-      (float) number_format((float) $rowData['count_delivery_1'], 2, ',', '') : '';
+      (float) number_format((float) $rowData['count_delivery_1'], 2, '.', '') : '';
     $row .= '<td class="col">' . $var . '</td>';
 
     $var = isset($rowData['count_delivery_2']) ?
-      (float) number_format((float) $rowData['count_delivery_2'], 2, ',', '') : '';
+      (float) number_format((float) $rowData['count_delivery_2'], 2, '.  ', '') : '';
     $row .= '<td class="col">' . $var . '</td>';
   }
 
@@ -207,18 +223,55 @@ function drawRow($index, $rowData, &$par) {
   return $row;
 }
 
+function drawGroup($groupName, &$par) {
+  $row = markupDrawGroup($groupName);
+
+  for ($i=1; $i < 6 ; $i++) {
+
+    $curPar = 'p0' . $i;
+
+    if (validate_parametr($par, $curPar)) {
+      if ($i == 1) {
+        $row .= '<td><td>';
+      } else {
+        $row .= '<td>';
+      }
+    }
+  }
+
+  $row .= '</tr>';
+
+  return $row;
+}
+
 function drawGroupTotal(&$grpTotal, &$par) {
-  $row = markupGroupTotal($grpTotal['count']);
+  $var = (float) number_format((float) $grpTotal['count'], 2, '.', '');
+  $row = markupGroupTotal($var);
+
+  if (validate_parametr($par, 'p04')) {
+    $row .= '<td></td>';
+  }
+
+  if (validate_parametr($par, 'p05')) {
+    $row .= '<td></td>';
+  }
 
   if (validate_parametr($par, 'p02')) {
-    $row .= '<td class="subtotal-col">' . $grpTotal['totalPurchase'] . '</td>';
+    $var = (float) number_format((float) $grpTotal['totalPurchase'], 2, '.', '');
+    $row .= '<td class="subtotal-col">' . $var . '</td>';
   }
+
   if (validate_parametr($par, 'p03')) {
-   $row .= '<td class="subtotal-col">' . $grpTotal['totalSell'] . '</td>';
+    $var = (float) number_format((float) $grpTotal['totalSell'], 2, '.', '');
+    $row .= '<td class="subtotal-col">' . $var . '</td>';
   }
+
   if (validate_parametr($par, 'p01')) {
-    $row .= '<td class="subtotal-col">' . $grpTotal['cntDlvr1'] . '</td>';
-    $row .= '<td class="subtotal-col">' . $grpTotal['cntDlvr2'] . '</td>';
+    $var = (float) number_format((float) $grpTotal['cntDlvr1'], 2, '.', '');
+    $row .= '<td class="subtotal-col">' . $var . '</td>';
+
+    $var = (float) number_format((float) $grpTotal['cntDlvr2'], 2, '.', '');
+    $row .= '<td class="subtotal-col">' . $var . '</td>';
   }
 
   $row .= '</tr>';
@@ -267,14 +320,12 @@ function remainsMakePdf($data, $directory, $par) {
   $tableHeader = drawTableHeader($par);
 
   $htmlDoc .= $tableHeader['col'];
-  $htmlDoc .= markupDrawTableHeaderStart();
   $htmlDoc .= $tableHeader['header'];
-  $htmlDoc .= markupDrawTableHeaderEnd();
 
   $total = drawData($htmlDoc, $data, $par);
 
-  $htmlDoc .= markupTotal($total['count'], $total['totalPurchase'],
-    $total['totalSell'], $total['cntDlvr1'], $total['cntDlvr2']);
+  $htmlDoc .= drawTotal($total, $par);
+  $htmlDoc .= markupFooter();
 
   $name = getFileName('Remains', $data['current_time'], 'pdf');
 

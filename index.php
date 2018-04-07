@@ -1,6 +1,4 @@
 <?php
-// require_once 'external_scripts/fpdf/fpdf.php';
-
   ini_set('error_reporting', E_ALL);
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
@@ -19,17 +17,18 @@
   require_once 'make_reports/remains_make_xlsx.php';
   require_once 'make_reports/remains_make_pdf.php';
 
+  require_once 'make_reports/turnover_make_pdf.php';
 
-  // $data = remainsGetData();
+
+  $data = remainsGetData();
   // $par = '[p01,p02,p03,p04,p05,p06]';
+  $par = '[p01,p02,p03,p04,p05]';
   // echo nameSpaceRemainsMakeXlsx\remainsMakeXlsx($data, '11', $par);
   // echo '<br>';
   // echo nameSpaceRemainsMakePdf\remainsMakePdf($data, '111', $par);
 
   $data = turnoverGetData();
   $par = '[p01,p02]';
+  // $par = '';
 
-  var_export($data);
-
-
-
+  echo nameSpaceTurnoverMakePdf\turnoverMakePdf($data, '111', $par);

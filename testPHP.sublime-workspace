@@ -4,20 +4,52 @@
 		"selected_items":
 		[
 			[
-				"cm",
-				"cmdOut"
+				"ro",
+				"row"
+			],
+			[
+				"r",
+				"row"
 			],
 			[
 				"var",
 				"var_dump"
 			],
 			[
-				"in",
-				"index"
+				"row",
+				"row1"
 			],
 			[
-				"ro",
-				"row2"
+				"fo",
+				"for\tfor …"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"functio",
+				"create_function"
+			],
+			[
+				"name",
+				"namespace"
+			],
+			[
+				"fun",
+				"func1"
+			],
+			[
+				"pri",
+				"priv"
+			],
+			[
+				"cm",
+				"cmdOut"
+			],
+			[
+				"in",
+				"index"
 			],
 			[
 				"htm",
@@ -30,10 +62,6 @@
 			[
 				"h",
 				"htmlDoc"
-			],
-			[
-				"fun",
-				"function"
 			],
 			[
 				"marg",
@@ -204,10 +232,6 @@
 				"dataset"
 			],
 			[
-				"fo",
-				"formTools"
-			],
-			[
 				"evt",
 				"evt"
 			],
@@ -287,58 +311,9 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 2822,
+				"buffer_size": 927,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "remains_make_pdf.php",
-			"settings":
-			{
-				"buffer_size": 7891,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html>\n<html>\n<head>\n\t<title>\n\t\t<meta charset=\"utf-8\">\n\t</title>\n\t<style type=\"text/css\">\n\t\t* {\n\t\t\tfont-family: \"DejaVuSans\";\n\t\t}\n\n\t\ttable {\n\t\t\tborder-collapse: collapse;\n\n\t\t}\n\n\t\ttd, th {\n\t\t\tpadding: 5px;\n\t\t}\n\n\t\tth {\n\t\t\tborder: 1px solid black;\n\t\t}\n\n\t\ttd {\n\t\t\tvertical-align: top;\n\t\t}\n\n\t\t.header {\n\t\t\tbackground-color: #D3FEE8;\n\t\t\tfont-weight: bold;\n\t\t\tcolor: #004200;\n\t\t\tfont-size: 16px;\n\t\t}\n\n\t\t.group {\n\t\t\tfont-weight: bold;\n\t\t\tbackground-color: #E5E5E5;\n\t\t\tborder: 1px solid black;\n\t\t\tfont-size: 16px;\n\t\t}\n\n\t\t.col {\n\t\t\tborder-left: 1px solid black;\n\t\t\tborder-right: 1px solid black;\n\t\t\tfont-size: 14px;\n\t\t\tword-break: break-all;\n\t\t}\n\n\t\t.subtotal {\n\t\t\tborder: 1px solid black;\n\t\t\tfont-weight: bold;\n\t\t\tcolor: #004200;\n\t\t\tfont-size: 16px;\n\t\t}\n\n\t\t.subtotal-col {\n\t\t\tborder-left: 1px solid black;\n\t\t\tborder-right: 1px solid black;\n\t\t\tfont-size: 16px;\n\t\t}\n\n\t\t.total {\n\t\t\tbackground-color: #D3FEE8;\n\t\t\tmargin-top: 16px;\n\t\t\tborder: 1px solid black;\n\t\t\tfont-weight: bold;\n\t\t\tcolor: #004200;\n\t\t\tfont-size: 16px;\n\t\t}\n\n\t\t.subtotal-col {\n\t\t\tborder-left: 1px solid black;\n\t\t\tborder-right: 1px solid black;\n\t\t\tfont-size: 16px;\n\t\t}\n\n\t\t.space {\n\t\t\theight: 20px;\n\t\t}\n\n\t\tul li {\n\t\t\tlist-style-type: none;\n\t\t\tmargin-bottom: 15px;\n\t\t\tfont-size: 16px;\n\t\t}\t\n\n\t</style>\n</head>\n<body>\n\t<h2>Bidone shop</h1>\n\n\t<ul>\n\t\t<li>Предприятие ХХХХХХХХХХХХХХХХХХХХ</li>\n\t\t<li>Точка продажи ХХХХХХХХХХХХХХХХХХХХ</li>\n\t</ul>\n\n\t<table>\n\n    <!-- ____________________________ -->\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<col>\n\t\t<thead class=\"header\">\n\t\t\t<tr>\n\t\t\t\t<th rowspan=\"2\">№</th>\n\t\t\t\t<th rowspan=\"2\">Группа</th>\n\t\t\t\t<th rowspan=\"2\">Наименование</th>\n\t\t\t\t<th rowspan=\"2\">Количество</th>\n\n\t\t\t\t<th rowspan=\"2\">Текущая цена закупки</th>\n\t\t\t\t<th rowspan=\"2\">Текущая цена продажи</th>\n\t\t\t\t<th rowspan=\"2\">На сумму по закупке</th>\n\t\t\t\t<th rowspan=\"2\">На сумму по продаже</th>\n\t\t\t\t<th colspan=\"2\">Доставка</th>\n\t\t\t</tr>\n\t\t\t<tr>\t\t\n\t\t\t\t<th>Ожидает<br>поступления на<br>склад</th>\n\t\t\t\t<th>Ожидает<br>отправки<br>получателю</th>\n\t\t\t</tr>\n\t\t</thead>\n\t\t<tbody>\n\n\t\t\t<!-- Группа -->\n\t\t\t<tr class=\"group\">\n\t\t\t\t<td></td>\n\t\t\t\t<td>Группа:</td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t</tr>\n\n\t\t\t<!-- Товары -->\n\t\t\t<tr>\n\t\t\t\t<td class=\"col\">1</td>\n\t\t\t\t<td class=\"col\">ШирихкодШирихкодШирихкодШирихкодШирихкод</td>\n\t\t\t\t<td class=\"col\">НазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазваниеНазвание</td>\n\t\t\t\t<td class=\"col\">10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td class=\"col\">1</td>\n\t\t\t\t<td class=\"col\">Ширихкод</td>\n\t\t\t\t<td class=\"col\">Название</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td class=\"col\">1</td>\n\t\t\t\t<td class=\"col\">Ширихкод</td>\n\t\t\t\t<td class=\"col\">Название</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td class=\"col\">1</td>\n\t\t\t\t<td class=\"col\">Ширихкод</td>\n\t\t\t\t<td class=\"col\">Название</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t\t<td class=\"col\">10000.00</td>\n\t\t\t</tr>\n\n\n\n\t\t\t<!-- Подытог -->\n\t\t\t<tr>\n\t\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t</tr>\n\t\t</tbody>\n\t\t<tr class=\"space\"></tr>\n\t\t<tfoot class=\"total\">\n\t\t\t<!-- Итог -->\n\t\t\t<td></td>\n\t\t\t<td>Итого:</td>\n\t\t\t<td></td>\n\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t<td></td>\n\t\t\t<td></td>\n\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t\t<td class=\"subtotal-col\">10000.00</td>\n\t\t</tfoot>\n\t</table>\n\n</body>\n</html>\n\n<!--  /var/www/html/external_scripts/wkhtmltox/bin/wkhtmltopdf --encoding utf-8 html.html test.pdf -->",
-			"file": "html.html",
-			"file_size": 6751,
-			"file_write_time": 131666974431408367,
-			"settings":
-			{
-				"buffer_size": 5362,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "markup/remains--make-pdf.php",
-			"settings":
-			{
-				"buffer_size": 3469,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<?php\nrequire_once 'external_scripts/xlsxwriter.class.php';\n\n//ini_set('error_reporting', E_ALL);\n//ini_set('display_errors', 1);\n//ini_set('display_startup_errors', 1);\n\nfunction remainsMakeXlsx($data, $directory, $par) {  \n  //  -------- Функции, формирующие документ --------\n  function setupHeader(&$writer) {\n    $header = array(\n      ' '=>'integer',\n      '  '=>'integer',\n      '   '=>'integer',\n      '    '=>'integer',\n      '     '=>'integer',\n      '      '=>'integer',\n      '       '=>'integer',\n      '        '=>'integer',\n      '         '=>'integer',\n      '          '=>'integer'\n    );\n    \n    $col_options = ['widths'=>[6, 18, 24, 12, 12, 12, 12, 12, 12, 12]];\n\n    $writer->writeSheetHeader('Sheet1', $header, $col_options);\n  }\n  \n  function drawInfo(&$writer, $business, $stock) {\n    $rowOptions = ['height'=>30, 'valign'=>'center', 'halign'=>'center'];\n\n    $rowOptionsDate = array(\n      'height'=>30,\n       ['valign'=>'center', 'halign'=>'center'],\n       ['valign'=>'center', 'halign'=>'center'],\n       ['valign'=>'center', 'halign'=>'center'],\n       ['valign'=>'center', 'halign'=>'center'],\n       ['valign'=>'center', 'halign'=>'center'],\n       ['valign'=>'center', 'halign'=>'center'],\n       ['valign'=>'center', 'halign'=>'center'],\n       ['valign'=>'center', 'halign'=>'center'],\n       ['valign'=>'center', 'halign'=>'center'],\n       ['valign'=>'center', 'halign'=>'center'] \n    );\n\n    drawBusiness($writer, $business, $rowOptions);\n    drawStock($writer, $stock, $rowOptions);\n    drawSpace($writer);\n    drawDate($writer, $rowOptionsDate);\n  }\n  \n  function drawTableHeader(&$writer, $par) {\n    $rowOptions = array(\n      'height'=>40,\n     \n      ['valign'=>'center', 'halign'=>'center', 'wrap_text'=> true,\n          'fill'=>'#D3FEE8', 'font-style'=>'bold', 'border'=>'left,right,top,bottom'],\n      ['valign'=>'center', 'halign'=>'center', 'wrap_text'=> true,\n          'fill'=>'#D3FEE8', 'font-style'=>'bold', 'border'=>'top,right,bottom'],\n      ['valign'=>'center', 'halign'=>'center', 'wrap_text'=> true,\n          'fill'=>'#D3FEE8', 'font-style'=>'bold', 'border'=>'top,right,bottom'],\n      ['valign'=>'center', 'halign'=>'center', 'wrap_text'=> true,\n          'fill'=>'#D3FEE8', 'font-style'=>'bold', 'border'=>'top,right,bottom'],\n    );\n\n    for ($i = 1; $i < 6; $i++) {\n      if (validate_parametr($par, 'p0' . $i)) {\n        $rowOptions[] = ['valign'=>'center', 'halign'=>'center',\n          'wrap_text'=> true, 'fill'=>'#D3FEE8', 'font-style'=>'bold',\n          'border'=>'top,right,bottom'];\n        if ($i === 1) {\n          $rowOptions[] = ['valign'=>'center', 'halign'=>'center',\n          'wrap_text'=> true, 'fill'=>'#D3FEE8', 'font-style'=>'bold',\n          'border'=>'top,right,bottom'];\n        }\n      }\n    }\n   \n    $cools = ['№', 'Группа', 'Наименование', 'Количество'];\n    \n    if (validate_parametr($par, 'p04')) {\n      $cools[] = 'Текущая цена закупки:';\n    }\n    \n    if (validate_parametr($par, 'p05')) {\n      $cools[] = 'Текущая цена продажи:';\n    }\n    \n    if (validate_parametr($par, 'p02')) {\n      $cools[] = 'На сумму по закупке:';\n    }\n    \n    if (validate_parametr($par, 'p03')) {\n      $cools[] = 'На сумму по продаже:';\n    }\n    \n    if (validate_parametr($par, 'p01')) {\n      $cools[] = 'ожидает поступления на склад:';\n      $cools[] = 'ожидает отправки покупателю';\n    }\n    \n    $writer->writeSheetRow('Sheet1',$cools, $rowOptions);\n  }\n\n  function drawData(&$writer, $data, $par) {\n\n    $total = [\n      'count'=>0,\n      'totalPurchase'=>0,\n      'totalSell'=>0,\n      'cntDlvr1'=>0,\n      'cntDlvr2'=>0\n    ];\n\n    foreach ($data['content'] as $group) {\n      $groupTotal = [\n        'count'=>0,\n        'totalPurchase'=>0,\n        'totalSell'=>0,\n        'cntDlvr1'=>0,\n        'cntDlvr2'=>0\n      ];\n\n      drawGroupName($writer, $group['group_name'], $par);\n\n      foreach ($group['group_content'] as $key => $row) {\n        calcVariableCol($row);\n\n        drawRow($writer, $key + 1, $row, $par);\n        calcGroupTotal($groupTotal, $row);\n\n      }\n      drawGroupTotal($writer, $groupTotal, $par);\n      calcTotal($total, $groupTotal);\n    }\n\n    return $total;\n\n  }\n\n  function drawTotal(&$writer, $total, $par) {\n    $rowOptions = array(\n      'height'=>20,\n      ['valign'=>'center', 'halign'=>'center'],\n      ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',\n        'border'=>'left,top,bottom', 'fill'=>'#D3FEE8', 'color'=>'#004200'],\n      ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',\n        'border'=>'top,bottom', 'fill'=>'#D3FEE8', 'color'=>'#004200']\n    );\n    \n    for ($i = 1; $i < 6; $i++) {\n      if (validate_parametr($par, 'p0' . $i)) {\n        $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',\n        'border'=>'top,bottom', 'fill'=>'#D3FEE8', 'color'=>'#004200'];      \n        if ($i === 1) {\n          $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',\n        'border'=>'top,bottom', 'fill'=>'#D3FEE8', 'color'=>'#004200'];        \n        }\n      }\n    }\n    \n    $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',\n        'border'=>'right,top,bottom', 'fill'=>'#D3FEE8', 'color'=>'#004200'];\n    \n    $options = array(\n      '',\n      'Итого:',\n      '',\n      $total['count']\n    );\n    \n    if (validate_parametr($par, 'p04')) {\n      $cools[] = '';\n    }\n    if (validate_parametr($par, 'p05')) {\n      $cools[] = '';\n    }\n    if (validate_parametr($par, 'p02')) {\n      $cools[] = $total['totalPurchase'];\n    }\n    if (validate_parametr($par, 'p03')) {\n      $cools[] = $total['totalSell'];\n    }\n    if (validate_parametr($par, 'p01')) {\n      $cools[] = $total['cntDlvr1'];\n      $cools[] = $total['cntDlvr2'];\n    }\n    \n    $writer->writeSheetRow(\n      'Sheet1',\n        \n      \n\n      $rowOptions\n    );\n  }\n  \n  //  -------- Вспомогательные функции --------\n  function drawSpace(&$writer) {\n    $writer->writeSheetRow(\n      'Sheet1',\n      ['', '', '', '', '', '', '', '', '', '']\n    );\n  }\n  \n  function drawBusiness(&$writer, &$business, &$rowOptions) {\n    $writer->writeSheetRow(\n      'Sheet1',\n      ['', 'Предприятие', $business, '', '', '', '', '', '', ''],\n      $rowOptions\n    );\n  }\n    \n  function drawStock(&$writer, &$stock, &$rowOptions) {\n    $writer->writeSheetRow(\n      'Sheet1',\n      ['', 'Точка продажи:', $stock, '', '', '', '', '', '', ''],\n      $rowOptions\n    );\n  }\n  \n  function drawDate(&$writer,$rowOptions) {\n    $today = date(\"Y-m-d H:i:s\");\n\n    $writer->writeSheetRow(\n      'Sheet1',\n      ['', '', 'Остатки товара', $today, '', '', '', '', '', ''],\n      $rowOptions\n    );\n    $writer->markMergedCell('Sheet1', 4, 3, 4, 4);\n  }\n  \n  function drawGroupName(&$writer, $groupName, $par) {\n    $rowOptions = array(\n      'height'=>20,\n      ['valign'=>'center', 'halign'=>'center', 'fill'=>'#E5E5E5',\n        'border'=>'bottom, left'],\n      ['valign'=>'center', 'halign'=>'center', 'fill'=>'#E5E5E5',\n        'border'=>'bottom'],\n      ['valign'=>'center', 'halign'=>'center', 'fill'=>'#E5E5E5',\n        'border'=>'bottom']\n    );\n    \n    $cools = ['', $groupName, '',''];\n    \n    for ($i = 1; $i < 6; $i++) {\n      if (validate_parametr($par, 'p0' . $i)) {\n        $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'fill'=>'#E5E5E5',\n        'border'=>'bottom'];      \n        $cools[] = '';\n\n        if ($i === 1) {\n          $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'fill'=>'#E5E5E5',\n            'border'=>'bottom'];        \n          $cools[] = '';\n        }\n      }\n    }\n\n    $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'fill'=>'#E5E5E5',\n      'border'=>'bottom,right'];\n     \n    $writer->writeSheetRow(\n      'Sheet1',\n      $cools,\n      $rowOptions\n    );\n  }\n  \n  function drawRow(&$writer, $index, $row, $par) {\n      $rowOptions = \n     [\n      'height'=>20,\n      ['valign'=>'center', 'halign'=>'center', 'border'=>'left,right'],\n      ['valign'=>'center', 'halign'=>'center', 'border'=>'right'],\n      ['valign'=>'center', 'halign'=>'center', 'border'=>'right'],\n      ['valign'=>'center', 'halign'=>'center', 'border'=>'right']\n    ];\n     \n    for ($i = 1; $i < 6; $i++) {\n      if (validate_parametr($par, 'p0' . $i)) {\n        $rowOptions[] = ['valign'=>'center', 'halign'=>'center',\n          'border'=>'right'];      \n        if ($i === 1) {\n          $rowOptions[] = ['valign'=>'center', 'halign'=>'center',\n            'border'=>'right'];        \n        }\n      }\n    }\n    \n    $cools = array(\n      $index,\n      (isset($row['barcode'])) ? $row['barcode'] : '',\n        $row['good_name'],\n        (float) number_format((float) $row['good_count'], 2, ',', '')\n    );\n   \n    if (validate_parametr($par, 'p04')) {\n      $cools[] = (isset($row['price_purchase'])) ? (float) number_format((float) $row['price_purchase'] , 2, ',', '') : '';\n    }\n    if (validate_parametr($par, 'p05')) {\n      $cools[] = (isset($row['price_sell'])) ? (float) number_format((float) $row['price_sell'] , 2, ',', '') : '';\n    }\n    if (validate_parametr($par, 'p02')) {\n      $cools[] = (isset($row['purchase_sum'])) ? (float) number_format((float) $row['purchase_sum'] , 2, ',', '') : '';\n    }\n    if (validate_parametr($par, 'p03')) {\n      $cools[] = (isset($row['sell_sum'])) ? (float) number_format((float) $row['sell_sum'] , 2, ',', '') : '';\n    }\n    if (validate_parametr($par, 'p01')) {\n      $cools[] = (isset($row['count_delivery_1'])) ? (float) number_format((float) $row['count_delivery_1'] , 2, ',', '') : '';\n      $cools[] = (isset($row['count_delivery_2'])) ? (float) number_format((float) $row['count_delivery_2'] , 2, ',', '') : '';\n    }\n    \n    $writer->writeSheetRow(\n      'Sheet1',\n      $cools,\n      $rowOptions\n    );\n  }\n  \n  function drawGroupTotal(&$writer, $totalGrp, $par) {\n    $rowOptions = array(\n      'height'=>20,\n      ['valign'=>'center', 'halign'=>'center', 'border'=>'left,top,bottom',\n        'color'=>'#004200'],\n      ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold', \n        'border'=>'top,bottom', 'color'=>'#004200'],\n      ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold', \n        'border'=>'top,bottom', 'color'=>'#004200'], \n    );\n    \n    for ($i = 1; $i < 6; $i++) {\n      if (validate_parametr($par, 'p0' . $i)) {\n        $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold', \n        'border'=>'top,bottom', 'color'=>'#004200'];      \n        if ($i === 1) {\n          $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold', \n        'border'=>'top,bottom', 'color'=>'#004200'];        \n        }\n      }\n    }\n    \n    $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold', \n        'border'=>'right,top,bottom', 'color'=>'#004200'];\n         \n    $cools = ['', 'Подытог', '', $totalGrp['count']];\n    \n    if (validate_parametr($par, 'p04')) {\n      $cools[] = '';\n    }\n    if (validate_parametr($par, 'p05')) {\n      $cools[] = '';\n    }\n    if (validate_parametr($par, 'p02')) {\n      $cools[] = $totalGrp['totalPurchase'];\n    }\n    if (validate_parametr($par, 'p03')) {\n      $cools[] = $totalGrp['totalSell'];\n    }\n    if (validate_parametr($par, 'p01')) {\n      $cools[] = $totalGrp['cntDlvr1'];\n      $cools[] = $totalGrp['cntDlvr2'];\n    }\n    \n    $writer->writeSheetRow(\n      'Sheet1',\n      $cools,\n      $rowOptions\n    );\n  }\n  \n  function calcTotal(&$total, &$groupTotal) {\n    $total['count'] += $groupTotal['count'];\n    $total['totalPurchase'] += $groupTotal['totalPurchase'];\n    $total['totalSell'] += $groupTotal['totalSell'];\n    $total['cntDlvr1'] += $groupTotal['cntDlvr1'];\n    $total['cntDlvr2'] += $groupTotal['cntDlvr2'];   \n  }\n\n\n  function calcVariableCol(&$row) {\n\n    if (isset($row['price_purchase'])) {\n      $row['purchase_sum'] = $row['good_count'] * $row['price_purchase'];\n    } \n     \n    if (isset($row['price_sell'])) {    \n      $row['sell_sum'] = $row['good_count'] * $row['price_sell'];\n    } \n  }\n  \n  function calcGroupTotal(&$total, &$row) { \n    \n    $total['count'] += (isset($row['good_count'])) ?\n         $row['good_count'] : 0;\n    \n    $total['totalPurchase'] += (isset($row['purchase_sum'])) ?\n         $row['purchase_sum'] : 0;\n    \n    $total['totalSell'] += (isset($row['sell_sum'])) ?\n         $row['sell_sum'] : 0;\n    \n    $total['cntDlvr1'] += (isset($row['count_delivery_1'])) ?\n         $row['count_delivery_1'] : 0;\n    \n    $total['cntDlvr2'] += (isset($row['count_delivery_2'])) ?\n         $row['count_delivery_2'] : 0;\n  \n  }\n\n  function getFileName($prefix, $date, $type) {\n    function getRnd() {\n      $genName = '';\n      for ($i = 0; $i < 4; $i++) {\n       $gen = rand(0, 9);\n       $genName .= $gen;\n      }    \n      return $genName;\n    }\n//    -----------------------------\n    $date = date('d_m', $date);\n    $name = $prefix . '_' . $date . '_';\n\n    $count = 0;\n \n    do {\n      $number = getRnd();\n      $name .= $number;\n      $count ++;\n      \n      if ($count > 100000) {\n        break;\n      }\n        \n    } while (file_exists($name));\n    \n    $name .= '.' . $type;\n    \n    return $name;    \n  }\n//  -------- MAIN :) --------\n\n  $writer = new XLSXWriter();\n\n  setupHeader($writer);\n  \n  $stock = (isset($data['stock_name'])) ? $data['stock_name'] : '';\n  \n  drawInfo($writer, $data['business_name'], $stock);\n  drawTableHeader($writer, $par);\n  $total = drawData($writer, $data, $par);\n  drawSpace($writer);\n  drawTotal($writer, $total, $par);\n  \n  $name = getFileName('Remains', $data['current_time'], 'xlsx');\n      \n//  $writer->writeToFile('users/' . $directory . '/reports/' . $name);\n  $writer->writeToFile($name);\n  return $name;\n}\n",
-			"file": "remains_make_xlsx.php",
-			"file_size": 14447,
-			"file_write_time": 131666066871018970,
-			"settings":
-			{
-				"buffer_size": 13742,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "    $row = <<<EOL\n    <tr>\n    <td>$index</td>\n    <td>$rowData['barcode']</td>\n    <td>$rowData['good_name']</td>\n    <td>$rowData['good_count']</td>\nEOL;",
-			"settings":
-			{
-				"buffer_size": 155,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -355,7 +330,7 @@
 		[
 			[
 				"Package Control: ",
-				"Package Control: Install Package"
+				"Package Control: List Packages"
 			],
 			[
 				"Package Co",
@@ -388,19 +363,38 @@
 	"expanded_folders":
 	[
 		"/D/USERS/kds/Documents/DEV/testPHP",
-		"/D/USERS/kds/Documents/DEV/testPHP/markup"
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/markup",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/temp",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data"
 	],
 	"file_history":
 	[
+		"/D/USERS/kds/Desktop/Turnover_07_04_3905.pdf.html",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/temp/html.html",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/remains_make_pdf.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/turnoverData.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/markup/remains--make-pdf.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/markup/turnover--make-pdf.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/turnover_make_pdf.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/remainsData.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/Turnover_data.txt",
+		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/SublimeTextXdebug/Xdebug.sublime-settings",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/remains_make_xlsx.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/external_scripts/xlsxwriter.class.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/test.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/sftp-config.json",
+		"/D/USERS/kds/Documents/DEV/testPHP/index.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/remains_make_xlsx.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/html.html",
+		"/D/USERS/kds/Documents/DEV/testPHP/remains_make_pdf.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/markup/remains--make-pdf.php",
 		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
 		"/D/USERS/kds/Documents/DEV/testPHP/markup/remains--makepdf-header.php",
 		"/D/USERS/kds/Desktop/html.html",
-		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
-		"/D/USERS/kds/Documents/DEV/testPHP/sftp-config.json",
 		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
 		"/D/USERS/kds/Documents/DEV/testPHP/testPHP.sublime-project",
-		"/D/USERS/kds/Documents/DEV/testPHP/remains_make_xlsx.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/ftp",
 		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations__sale.js",
 		"/D/USERS/kds/Documents/DEV/lopos/src/js/main.js",
@@ -503,27 +497,11 @@
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/README.md",
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/markup/README.md",
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/buttons/README.md",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/build/README.md",
-		"/E/lopos-full/gulpfile.js",
-		"/E/lopos-full/.babelrc",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/DEV/gulpfile.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/DEV/src/index.html",
-		"/D/USERS/kds/Desktop/lopos-build/gulpfile.js",
-		"/D/USERS/kds/Desktop/lopos-build/package.json",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/DEV/.babelrc",
-		"/D/USERS/kds/Documents/DEV/lopos/js/login.js",
-		"/D/USERS/kds/Desktop/lopos-build/.eslintrc.js",
-		"/D/USERS/kds/Desktop/lopos-build/.editorconfig",
-		"/D/USERS/kds/Desktop/lopos-build/.babelrc",
-		"/D/USERS/kds/Desktop/lopos-build/.eslintignore",
-		"/D/USERS/kds/Documents/DEV/lopos/gulpfile.js",
-		"/D/USERS/kds/Documents/DEV/lopos/build/js/login.js",
-		"/D/USERS/kds/Documents/DEV/lopos/js/xhr.js",
-		"/D/USERS/kds/Documents/DEV/lopos/login.html"
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/build/README.md"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -534,9 +512,41 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"grpTotal",
+			"markupGroupTotal",
+			"markupTotal",
+			"th",
+			";\n",
+			"\"subtotal-col",
+			"\\",
+			"drawTotal",
+			"total",
+			"th",
+			"drawTableHeader",
+			"tbody",
+			"tdbody",
+			"tbody",
+			"th",
+			"exec",
+			"drawGroupTotal",
+			"calcGroupTotal",
+			"par_count",
+			"drawRow",
+			"$row2",
+			"row2",
+			"]",
+			"[",
+			"}",
+			"{",
+			"\\",
+			"\\n",
+			"\\",
+			"\\n",
+			"\\",
+			"writeFile",
 			"date",
 			"var_dump",
 			"var",
@@ -632,46 +642,29 @@
 			"clickRightGoodsCallback",
 			"drawGoods",
 			"click",
-			"submit",
-			"();\n",
-			"onSuccessGoodsLoad",
-			"restoreForm",
-			"onSuccessGoodsLoad",
-			"const getGood",
-			"getGood",
-			"goodsCardSubmit",
-			"goods-card-submit",
-			"4343434343434343434",
-			"fdfdfdfdfdfdfdfddfdfdfd",
-			"getData",
-			"\n  ",
-			"getDataCallbackFromGoodCard",
-			"getData",
-			"goodCard.fill",
-			"goodCard.fill();",
-			"showGoodCard",
-			"getDataCallback",
-			"addLeftFormCallback",
-			"showGoodCard",
-			"operationsModalAdd",
-			"submit",
-			"showGoodCard",
-			"modalGroup",
-			"operationsModalAdd",
-			"nomCard",
-			"sub",
-			"console",
-			"modalGroup",
-			"getGood",
-			"clickLeftFindToBarcodeCallack",
-			"addG"
+			"submit"
 		],
 		"highlight": false,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": true,
 		"replace_history":
 		[
+			"total",
+			"td",
+			"\"subtotal-col\"",
+			"/",
+			"td",
+			"$endColumnLen",
+			"$row2Start",
+			"row2Start",
+			"",
+			"]",
+			"[",
+			"",
+			"\\r\\n",
+			"\\n\\r",
+			"",
 			"td",
 			"\"",
 			"16px",
@@ -751,13 +744,13 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": true,
+		"whole_word": false,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -766,81 +759,35 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2822,
+						"buffer_size": 927,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2780,
-								2780
+								927,
+								927
 							]
 						],
 						"settings":
 						{
 							"SL.14.region_keys":
 							[
-								"sublime_linter.protected_regions"
 							],
-							"SL.16.region_keys":
+							"SL.62.region_keys":
 							[
 								"sublime_linter.protected_regions"
-							],
-							"SL.24.region_keys":
-							[
-							],
-							"SL.41.region_keys":
-							[
 							],
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
 							"incomplete_sync": null,
 							"remote_loading": false,
-							"spell_check": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 684.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "remains_make_pdf.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7891,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2720,
-								2720
-							]
-						],
-						"settings":
-						{
-							"SL.15.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"incomplete_sync": null,
 							"rulers":
 							[
 								80
 							],
+							"synced": false,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
@@ -852,184 +799,13 @@
 					},
 					"stack_index": 0,
 					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "html.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5362,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4649,
-								4649
-							]
-						],
-						"settings":
-						{
-							"SL.16.region_keys":
-							[
-							],
-							"SL.18.region_keys":
-							[
-							],
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 845.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "markup/remains--make-pdf.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3469,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1842,
-								1842
-							]
-						],
-						"settings":
-						{
-							"SL.17.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.27.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"rulers":
-							[
-								80
-							],
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1881.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "remains_make_xlsx.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13742,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								12612,
-								13198
-							]
-						],
-						"settings":
-						{
-							"SL.17.region_keys":
-							[
-							],
-							"SL.18.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"rulers":
-							[
-								80
-							],
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 7562.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 155,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								83,
-								150
-							]
-						],
-						"settings":
-						{
-							"SL.19.region_keys":
-							[
-							],
-							"SL.25.region_keys":
-							[
-							],
-							"incomplete_sync": null,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 30.0
+		"height": 43.0
 	},
 	"input":
 	{
@@ -1090,7 +866,7 @@
 	"project": "testPHP.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 78.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1128,15 +904,35 @@
 			"hide_conflict": false,
 			"restore_index":
 			{
-				"35":
+				"14":
 				{
 					"group": 0,
 					"index": 0
 				},
-				"37":
+				"15":
 				{
 					"group": 0,
 					"index": 1
+				},
+				"16":
+				{
+					"group": 0,
+					"index": 2
+				},
+				"17":
+				{
+					"group": 0,
+					"index": 3
+				},
+				"18":
+				{
+					"group": 0,
+					"index": 4
+				},
+				"19":
+				{
+					"group": 0,
+					"index": 5
 				}
 			},
 			"restore_layout":
@@ -1167,7 +963,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 234.0,
+	"side_bar_width": 244.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
