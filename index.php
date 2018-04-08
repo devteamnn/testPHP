@@ -29,7 +29,7 @@
   // echo nameSpaceRemainsMakePdf\remainsMakePdf($data, '111', $par);
 
   $data = turnoverGetData();
-  $par = '[p02,p01]';
+  $par = '[p01,p02 ]';
   // $par = '';
 
   echo nameSpaceTurnoverMakeXlsx\turnoverMakeXlsx($data, '111', $par);

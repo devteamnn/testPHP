@@ -7,17 +7,17 @@ namespace nameSpaceTurnoverMakeXlsx {
   //  -------- Функции, формирующие документ --------
   function setupHeader(&$writer) {
     $header = array(
-      ' '=>'@',
-      '  '=>'@',
-      '   '=>'@',
-      '    '=>'@',
-      '     '=>'@',
-      '      '=>'@',
-      '       '=>'@',
-      '        '=>'@',
-      '         '=>'@',
-      '          '=>'@',
-      '           '=>'@'
+      ' '=>'GENERAL',
+      '  '=>'GENERAL',
+      '   '=>'GENERAL',
+      '    '=>'GENERAL',
+      '     '=>'GENERAL',
+      '      '=>'GENERAL',
+      '       '=>'GENERAL',
+      '        '=>'GENERAL',
+      '         '=>'GENERAL',
+      '          '=>'GENERAL',
+      '           '=>'GENERAL'
     );
 
     $col_options = ['widths'=>[6, 18, 24, 12, 12, 12, 12, 12, 12, 12, 12]];
@@ -26,6 +26,9 @@ namespace nameSpaceTurnoverMakeXlsx {
   }
 
   function drawInfo(&$writer, $business, $stock, $stPeriod, $endPeriod) {
+    drawLogo($writer);
+    drawSpace($writer);
+
     $rowOptions = ['height'=>30, 'valign'=>'center', 'halign'=>'center'];
 
     $rowOptionsDate = array(
@@ -85,9 +88,9 @@ namespace nameSpaceTurnoverMakeXlsx {
       $headRow1[] = '';
       $headRow2[] = 'Сумма:';
 
-      $writer->markMergedCell('Sheet1', $start_row = 5,
-        $start_col= count($headRow2) - 2, $end_row = 5,
-        $end_col=count($headRow2) - 1);
+      $writer->markMergedCell('Sheet1', $start_row = 7,
+        $start_col = count($headRow2) - 2, $end_row = 7,
+        $end_col = count($headRow2) - 1);
     }
 
     $headRow1[] = 'Расход / Продажа';
@@ -97,9 +100,9 @@ namespace nameSpaceTurnoverMakeXlsx {
       $headRow1[] = '';
       $headRow2[] = 'Сумма:';
 
-      $writer->markMergedCell('Sheet1', $start_row = 5,
-        $start_col= count($headRow2) - 2, $end_row = 5,
-        $end_col=count($headRow2) - 1);
+      $writer->markMergedCell('Sheet1', $start_row = 7,
+        $start_col = count($headRow2) - 2, $end_row = 7,
+        $end_col = count($headRow2) - 1);
     }
 
     $headRow1[] = 'Конец периода';
@@ -119,12 +122,12 @@ namespace nameSpaceTurnoverMakeXlsx {
       $endMerge++;
     }
 
-    $writer->markMergedCell('Sheet1', $start_row = 5, $start_col = $startMerge,
-      $end_row = 5, $end_col = $endMerge);
+    $writer->markMergedCell('Sheet1', $start_row = 7, $start_col = $startMerge,
+      $end_row = 7, $end_col = $endMerge);
 
     for ($i = 0; $i < 3; $i++) {
-      $writer->markMergedCell('Sheet1', $start_row = 5, $start_col = $i,
-        $end_row = 6, $end_col = $i);
+      $writer->markMergedCell('Sheet1', $start_row = 7, $start_col = $i,
+        $end_row = 8, $end_col = $i);
     }
 
     $writer->writeSheetRow('Sheet1',$headRow1, $rowOptions);
@@ -204,33 +207,44 @@ namespace nameSpaceTurnoverMakeXlsx {
       'color'=>'#004200', 'border-style'=>'thin'];
 
     $cools = ['', 'Итого:', '',
-      number_format((float) $total['st_count'] , 2, ',', ''),
-      number_format((float) $total['purchased_count'] , 2, ',', '')];
+      round((float) $total['st_count'], 2),
+      round((float) $total['purchased_count'], 2),];
 
     if ($p01) {
-      $cools[] = number_format((float) $total['purchased_sum'] , 2, ',', '');
+      $cools[] = round((float) $total['purchased_sum'], 2);
     }
 
-    $cools[] = number_format((float) $total['sold_count'] , 2, ',', '');
+    $cools[] = round((float) $total['sold_count'], 2);
 
     if ($p02) {
-      $cools[] = number_format((float) $total['sold_sum'] , 2, ',', '');
+      $cools[] = round((float) $total['sold_sum'], 2);
     }
 
-    $cools[] = number_format((float) $total['end_count'] , 2, ',', '');
+    $cools[] = round((float) $total['end_count'], 2);
 
     if ($p01) {
-      $cools[] = number_format((float) $total['end_sum_purchase'] , 2, ',', '');
+      $cools[] = round((float) $total['end_sum_purchase'], 2);
     }
 
     if ($p02) {
-      $cools[] = number_format((float) $total['end_sum_sell'] , 2, ',', '');
+      $cools[] = round((float) $total['end_sum_sell'], 2);
     }
 
     $writer->writeSheetRow('Sheet1', $cools, $rowOptions);
   }
 
   //  -------- Вспомогательные функции --------
+  function drawLogo(&$writer) {
+    $rowOptions = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',
+      'font-size'=>'17', 'halign'=>'left', 'height'=>30];
+
+    $logo = ['', 'Bidone Shop'];
+
+    $writer->writeSheetRow('Sheet1', $logo, $rowOptions);
+    $writer->markMergedCell('Sheet1', $start_row = 1, $start_col = 1,
+      $end_row = 1, $end_col = 2);
+  }
+
   function drawSpace(&$writer) {
     $writer->writeSheetRow(
       'Sheet1',
@@ -297,10 +311,13 @@ namespace nameSpaceTurnoverMakeXlsx {
     $stPeriod = date("d.m.Y", $stPeriod);
     $endPeriod = date("d.m.Y", $endPeriod);
 
+    $writer->markMergedCell('Sheet1', $start_row = 6, $start_col = 3,
+      $end_row = 6, $end_col = 6);
+
     $writer->writeSheetRow(
       'Sheet1',
-      ['', '', 'Оборот товара', 'с', $stPeriod, 'по', $endPeriod, '', '', '',
-        ''], $rowOptions);
+      ['', '', 'Оборот товара', 'с ' . $stPeriod . ' по ' . $endPeriod, '',
+        '', '', '', '', '', ''], $rowOptions);
   }
 
   function drawRow(&$writer, $index, $row, $par, $groupName) {
@@ -327,34 +344,35 @@ namespace nameSpaceTurnoverMakeXlsx {
 
     $cools = [$index, $groupName, $row['good_name'],
       (isset($row['st_count'])) ?
-        number_format((float) $row['st_count'] , 2, ',', '') : '',
+        round((float) $row['st_count'], 2) : '',
+
       (isset($row['purchased_count'])) ?
-        number_format((float) $row['purchased_count'] , 2, ',', '') : '',];
+        round((float) $row['purchased_count'], 2) : '',];
 
     if (validate_parametr($par, 'p01')) {
       $cools[] = (isset($row['purchased_sum'])) ?
-        number_format((float) $row['purchased_sum'] , 2, ',', '') : '';
+        round((float) $row['purchased_sum'], 2) : '';
     }
 
     $cools[] = (isset($row['sold_count'])) ?
-      number_format((float) $row['sold_count'] , 2, ',', '') : '';
+      round((float) $row['sold_count'], 2) : '';
 
     if (validate_parametr($par, 'p02')) {
       $cools[] = (isset($row['sold_sum'])) ?
-        number_format((float) $row['sold_sum'] , 2, ',', '') : '';
+        round((float) $row['sold_sum'], 2) : '';
     }
 
     $cools[] = (isset($row['end_count'])) ?
-      number_format((float) $row['end_count'] , 2, ',', '') : '';
+      round((float) $row['end_count'], 2) : '';
 
     if (validate_parametr($par, 'p01')) {
       $cools[] = (isset($row['end_sum_purchase'])) ?
-        number_format((float) $row['end_sum_purchase'] , 2, ',', '') : '';
+        round((float) $row['end_sum_purchase'], 2) : '';
     }
 
     if (validate_parametr($par, 'p02')) {
       $cools[] = (isset($row['end_sum_sell'])) ?
-        number_format((float) $row['end_sum_sell'] , 2, ',', '') : '';
+        round((float) $row['end_sum_sell'], 2) : '';
     }
 
     $writer->writeSheetRow('Sheet1', $cools, $rowOptions);
@@ -392,27 +410,27 @@ namespace nameSpaceTurnoverMakeXlsx {
       'border-style'=>'thin'];
 
     $cools = ['', 'Подытог', '',
-      number_format((float) $totalGrp['st_count'] , 2, ',', ''),
-      number_format((float) $totalGrp['purchased_count'] , 2, ',', '')];
+      round((float) $totalGrp['st_count'], 2),
+      round((float) $totalGrp['purchased_count'], 2)];
 
     if ($p01) {
-      $cools[] = number_format((float) $totalGrp['purchased_sum'] , 2, ',', '');
+      $cools[] = round((float) $totalGrp['purchased_sum'], 2);
     }
 
-    $cools[] = number_format((float) $totalGrp['sold_count'] , 2, ',', '');
+    $cools[] = round((float) $totalGrp['sold_count'], 2);
 
     if ($p02) {
-      $cools[] = number_format((float) $totalGrp['sold_sum'] , 2, ',', '');
+      $cools[] = round((float) $totalGrp['sold_sum'], 2);
     }
 
-    $cools[] = number_format((float) $totalGrp['end_count'] , 2, ',', '');
+    $cools[] = round((float) $totalGrp['end_count'], 2);
 
     if ($p01) {
-      $cools[] = number_format((float) $totalGrp['end_sum_purchase'] , 2, ',', '');
+      $cools[] = round((float) $totalGrp['end_sum_purchase'], 2);
     }
 
     if ($p02) {
-      $cools[] = number_format((float) $totalGrp['end_sum_sell'] , 2, ',', '');
+      $cools[] = round((float) $totalGrp['end_sum_sell'], 2);
     }
 
     $writer->writeSheetRow('Sheet1', $cools, $rowOptions);

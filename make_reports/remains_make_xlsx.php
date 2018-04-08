@@ -9,16 +9,16 @@ namespace nameSpaceRemainsMakeXlsx {
   //  -------- Функции, формирующие документ --------
   function setupHeader(&$writer) {
     $header = array(
-      ' '=>'@',
-      '  '=>'@',
-      '   '=>'@',
-      '    '=>'@',
-      '     '=>'@',
-      '      '=>'@',
-      '       '=>'@',
-      '        '=>'@',
-      '         '=>'@',
-      '          '=>'@'
+      ' '=>'GENERAL',
+      '  '=>'GENERAL',
+      '   '=>'GENERAL',
+      '    '=>'GENERAL',
+      '     '=>'GENERAL',
+      '      '=>'GENERAL',
+      '       '=>'GENERAL',
+      '        '=>'GENERAL',
+      '         '=>'GENERAL',
+      '          '=>'GENERAL'
     );
 
     $col_options = ['widths'=>[6, 18, 24, 12, 12, 12, 12, 12, 12, 12]];
@@ -27,6 +27,10 @@ namespace nameSpaceRemainsMakeXlsx {
   }
 
   function drawInfo(&$writer, $business, $stock) {
+
+    drawLogo($writer);
+    drawSpace($writer);
+
     $rowOptions = ['height'=>30, 'valign'=>'center', 'halign'=>'center'];
 
     $rowOptionsDate = array(
@@ -54,24 +58,28 @@ namespace nameSpaceRemainsMakeXlsx {
       'height'=>40,
 
       ['valign'=>'center', 'halign'=>'center', 'wrap_text'=> true,
-          'fill'=>'#D3FEE8', 'font-style'=>'bold', 'border'=>'left,right,top,bottom'],
+          'fill'=>'#D3FEE8', 'font-style'=>'bold',
+          'border'=>'left,right,top,bottom', 'border-style'=>'thin'],
       ['valign'=>'center', 'halign'=>'center', 'wrap_text'=> true,
-          'fill'=>'#D3FEE8', 'font-style'=>'bold', 'border'=>'top,right,bottom'],
+          'fill'=>'#D3FEE8', 'font-style'=>'bold', 'border'=>'top,right,bottom',
+          'border-style'=>'thin'],
       ['valign'=>'center', 'halign'=>'center', 'wrap_text'=> true,
-          'fill'=>'#D3FEE8', 'font-style'=>'bold', 'border'=>'top,right,bottom'],
+          'fill'=>'#D3FEE8', 'font-style'=>'bold', 'border'=>'top,right,bottom',
+          'border-style'=>'thin'],
       ['valign'=>'center', 'halign'=>'center', 'wrap_text'=> true,
-          'fill'=>'#D3FEE8', 'font-style'=>'bold', 'border'=>'top,right,bottom'],
+          'fill'=>'#D3FEE8', 'font-style'=>'bold', 'border'=>'top,right,bottom',
+          'border-style'=>'thin'],
     );
 
     for ($i = 1; $i < 6; $i++) {
       if (validate_parametr($par, 'p0' . $i)) {
         $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
           'wrap_text'=> true, 'fill'=>'#D3FEE8', 'font-style'=>'bold',
-          'border'=>'top,right,bottom'];
+          'border'=>'top,right,bottom', 'border-style'=>'thin'];
         if ($i === 1) {
           $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
           'wrap_text'=> true, 'fill'=>'#D3FEE8', 'font-style'=>'bold',
-          'border'=>'top,right,bottom'];
+          'border'=>'top,right,bottom', 'border-style'=>'thin'];
         }
       }
     }
@@ -111,13 +119,13 @@ namespace nameSpaceRemainsMakeXlsx {
       $coolsRow2[] = 'ожидает поступления на склад:';
       $coolsRow2[] = 'ожидает отправки покупателю';
 
-      $writer->markMergedCell('Sheet1', $start_row=5, $start_col=$coolsCount,
-        $end_row=5, $end_col=$coolsCount + 1);
+      $writer->markMergedCell('Sheet1', $start_row = 7, $start_col = $coolsCount,
+        $end_row = 7, $end_col = $coolsCount + 1);
     }
 
     for ($i = 0; $i < $coolsCount; $i++) {
-      $writer->markMergedCell('Sheet1', $start_row=5, $start_col=$i,
-          $end_row=6, $end_col=$i);
+      $writer->markMergedCell('Sheet1', $start_row = 7, $start_col = $i,
+        $end_row = 8, $end_col = $i);
     }
 
     $writer->writeSheetRow('Sheet1',$coolsRow1, $rowOptions);
@@ -164,31 +172,31 @@ namespace nameSpaceRemainsMakeXlsx {
       'height'=>20,
       ['valign'=>'center', 'halign'=>'center'],
       ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',
-        'border'=>'left,top,bottom', 'fill'=>'#D3FEE8', 'color'=>'#004200'],
+        'border'=>'left,top,bottom', 'fill'=>'#D3FEE8', 'color'=>'#004200',
+        'border-style'=>'thin'],
       ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',
-        'border'=>'top,bottom', 'fill'=>'#D3FEE8', 'color'=>'#004200']
+        'border'=>'top,bottom', 'fill'=>'#D3FEE8', 'color'=>'#004200',
+        'border-style'=>'thin']
     );
 
     for ($i = 1; $i < 6; $i++) {
       if (validate_parametr($par, 'p0' . $i)) {
-        $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',
-        'border'=>'top,bottom', 'fill'=>'#D3FEE8', 'color'=>'#004200'];
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
+        'font-style'=>'bold', 'border'=>'top,bottom', 'fill'=>'#D3FEE8',
+        'color'=>'#004200', 'border-style'=>'thin'];
         if ($i === 1) {
-          $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',
-        'border'=>'top,bottom', 'fill'=>'#D3FEE8', 'color'=>'#004200'];
+          $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
+          'font-style'=>'bold', 'border'=>'top,bottom', 'fill'=>'#D3FEE8',
+          'color'=>'#004200', 'border-style'=>'thin'];
         }
       }
     }
 
     $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',
-        'border'=>'right,top,bottom', 'fill'=>'#D3FEE8', 'color'=>'#004200'];
+        'border'=>'right,top,bottom', 'fill'=>'#D3FEE8', 'color'=>'#004200',
+        'border-style'=>'thin'];
 
-    $cools = array(
-      '',
-      'Итого:',
-      '',
-      number_format((float) $total['count'] , 2, ',', '')
-    );
+    $cools = ['', 'Итого:', '', round((float) $total['count'], 2)];
 
     if (validate_parametr($par, 'p04')) {
       $cools[] = '';
@@ -197,24 +205,31 @@ namespace nameSpaceRemainsMakeXlsx {
       $cools[] = '';
     }
     if (validate_parametr($par, 'p02')) {
-      $cools[] = number_format((float) $total['totalPurchase'] , 2, ',', '');
+      $cools[] = round((float) $total['totalPurchase'], 2);
     }
     if (validate_parametr($par, 'p03')) {
-      $cools[] = number_format((float) $total['totalSell'] , 2, ',', '');
+      $cools[] = round((float) $total['totalSell'], 2);
     }
     if (validate_parametr($par, 'p01')) {
-      $cools[] = number_format((float) $total['cntDlvr1'] , 2, ',', '');
-      $cools[] = number_format((float) $total['cntDlvr2'] , 2, ',', '');
+      $cools[] = round((float) $total['cntDlvr1'], 2);
+      $cools[] = round((float) $total['cntDlvr2'], 2);
     }
 
-    $writer->writeSheetRow(
-      'Sheet1',
-      $cools,
-      $rowOptions
-    );
+    $writer->writeSheetRow('Sheet1', $cools, $rowOptions);
   }
 
   //  -------- Вспомогательные функции --------
+  function drawLogo(&$writer) {
+    $rowOptions = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',
+      'font-size'=>'17', 'halign'=>'left', 'height'=>30];
+
+    $logo = ['', 'Bidone Shop'];
+
+    $writer->writeSheetRow('Sheet1', $logo, $rowOptions);
+    $writer->markMergedCell('Sheet1', $start_row = 1, $start_col = 1,
+      $end_row = 1, $end_col = 2);
+  }
+
   function drawSpace(&$writer) {
     $writer->writeSheetRow(
       'Sheet1',
@@ -246,18 +261,18 @@ namespace nameSpaceRemainsMakeXlsx {
       ['', '', 'Остатки товара', $today, '', '', '', '', '', ''],
       $rowOptions
     );
-    $writer->markMergedCell('Sheet1', 4, 3, 4, 4);
+    $writer->markMergedCell('Sheet1', 6, 3, 6, 4);
   }
 
   function drawGroupName(&$writer, $groupName, $par) {
     $rowOptions = array(
       'height'=>20,
       ['valign'=>'center', 'halign'=>'center', 'fill'=>'#E5E5E5',
-        'border'=>'bottom, left'],
+        'border'=>'bottom, left', 'border-style'=>'thin'],
       ['valign'=>'center', 'halign'=>'center', 'fill'=>'#E5E5E5',
-        'border'=>'bottom'],
+        'border'=>'bottom', 'border-style'=>'thin'],
       ['valign'=>'center', 'halign'=>'center', 'fill'=>'#E5E5E5',
-        'border'=>'bottom']
+        'border'=>'bottom', 'border-style'=>'thin']
     );
 
     $cools = ['', $groupName, '',''];
@@ -288,79 +303,85 @@ namespace nameSpaceRemainsMakeXlsx {
 
   function drawRow(&$writer, $index, $row, $par) {
     $rowOptions =['height'=>20,
-      ['valign'=>'center', 'halign'=>'center', 'border'=>'left,right'],
-      ['valign'=>'center', 'halign'=>'center', 'border'=>'right'],
-      ['valign'=>'center', 'halign'=>'center', 'border'=>'right'],
-      ['valign'=>'center', 'halign'=>'center', 'border'=>'right']];
+      ['valign'=>'center', 'halign'=>'center', 'border'=>'left,right',
+        'border-style'=>'thin'],
+      ['valign'=>'center', 'halign'=>'center', 'border'=>'right',
+        'border-style'=>'thin'],
+      ['valign'=>'center', 'halign'=>'center', 'border'=>'right',
+        'border-style'=>'thin'],
+      ['valign'=>'center', 'halign'=>'center', 'border'=>'right',
+        'border-style'=>'thin']];
 
     for ($i = 1; $i < 6; $i++) {
       if (validate_parametr($par, 'p0' . $i)) {
         $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
-          'border'=>'right'];
+          'border'=>'right', 'border-style'=>'thin'];
         if ($i === 1) {
           $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
-            'border'=>'right'];
+            'border'=>'right', 'border-style'=>'thin'];
         }
       }
     }
 
-    $cools = array(
-      $index,
-      (isset($row['barcode'])) ? $row['barcode'] : '',
-        $row['good_name'],
-        number_format((float) $row['good_count'], 2, ',', '')
-    );
+    $cools = [$index,
+      (isset($row['barcode'])) ? $row['barcode'] : '', $row['good_name'],
+      round((float) $row['good_count'], 2)];
 
     if (validate_parametr($par, 'p04')) {
-      $cools[] = (isset($row['price_purchase'])) ? number_format((float) $row['price_purchase'] , 2, ',', '') : '';
+      $cools[] = (isset($row['price_purchase'])) ?
+        round((float) $row['price_purchase'], 2) : '';
     }
     if (validate_parametr($par, 'p05')) {
-      $cools[] = (isset($row['price_sell'])) ? number_format((float) $row['price_sell'] , 2, ',', '') : '';
+      $cools[] = (isset($row['price_sell'])) ?
+        round((float) $row['price_sell'], 2) : '';
     }
     if (validate_parametr($par, 'p02')) {
-      $cools[] = (isset($row['purchase_sum'])) ? number_format((float) $row['purchase_sum'] , 2, ',', '') : '';
+      $cools[] = (isset($row['purchase_sum'])) ?
+        round((float) $row['purchase_sum'], 2) : '';
     }
     if (validate_parametr($par, 'p03')) {
-      $cools[] = (isset($row['sell_sum'])) ? number_format((float) $row['sell_sum'] , 2, ',', '') : '';
+      $cools[] = (isset($row['sell_sum'])) ?
+        round((float) $row['sell_sum'], 2) : '';
     }
     if (validate_parametr($par, 'p01')) {
-      $cools[] = (isset($row['count_delivery_1'])) ? number_format((float) $row['count_delivery_1'] , 2, ',', '') : '';
-      $cools[] = (isset($row['count_delivery_2'])) ? number_format((float) $row['count_delivery_2'] , 2, ',', '') : '';
+      $cools[] = (isset($row['count_delivery_1'])) ?
+        round((float) $row['count_delivery_1'], 2) : '';
+
+      $cools[] = (isset($row['count_delivery_2'])) ?
+        round((float) $row['count_delivery_2'], 2) : '';
     }
 
-    $writer->writeSheetRow(
-      'Sheet1',
-      $cools,
-      $rowOptions
-    );
+    $writer->writeSheetRow('Sheet1', $cools, $rowOptions);
   }
 
   function drawGroupTotal(&$writer, $totalGrp, $par) {
     $rowOptions = array(
       'height'=>20,
       ['valign'=>'center', 'halign'=>'center', 'border'=>'left,top,bottom',
-        'color'=>'#004200'],
+        'color'=>'#004200', 'border-style'=>'thin'],
       ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',
-        'border'=>'top,bottom', 'color'=>'#004200'],
+        'border'=>'top,bottom', 'color'=>'#004200', 'border-style'=>'thin'],
       ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',
-        'border'=>'top,bottom', 'color'=>'#004200'],
+        'border'=>'top,bottom', 'color'=>'#004200', 'border-style'=>'thin'],
     );
 
     for ($i = 1; $i < 6; $i++) {
       if (validate_parametr($par, 'p0' . $i)) {
-        $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',
-        'border'=>'top,bottom', 'color'=>'#004200'];
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
+          'font-style'=>'bold', 'border'=>'top,bottom', 'color'=>'#004200',
+          'border-style'=>'thin'];
         if ($i === 1) {
-          $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',
-        'border'=>'top,bottom', 'color'=>'#004200'];
+          $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
+          'font-style'=>'bold', 'border'=>'top,bottom', 'color'=>'#004200',
+          'border-style'=>'thin'];
         }
       }
     }
 
     $rowOptions[] = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',
-        'border'=>'right,top,bottom', 'color'=>'#004200'];
+        'border'=>'right,top,bottom', 'color'=>'#004200', 'border-style'=>'thin'];
 
-    $cools = ['', 'Подытог', '', number_format((float) $totalGrp['count'] , 2, ',', '')];
+    $cools = ['', 'Подытог', '', round((float) $totalGrp['count'], 2)];
 
     if (validate_parametr($par, 'p04')) {
       $cools[] = '';
@@ -369,21 +390,17 @@ namespace nameSpaceRemainsMakeXlsx {
       $cools[] = '';
     }
     if (validate_parametr($par, 'p02')) {
-      $cools[] = number_format((float) $totalGrp['totalPurchase'] , 2, ',', '');
+      $cools[] = round((float) $totalGrp['totalPurchase'], 2);
     }
     if (validate_parametr($par, 'p03')) {
-      $cools[] = number_format((float) $totalGrp['totalSell'] , 2, ',', '');
+      $cools[] = round((float) $totalGrp['totalSell'], 2);
     }
     if (validate_parametr($par, 'p01')) {
-      $cools[] = number_format((float) $totalGrp['cntDlvr1'] , 2, ',', '');
-      $cools[] = number_format((float) $totalGrp['cntDlvr2'] , 2, ',', '');
+      $cools[] = round((float) $totalGrp['cntDlvr1'], 2);
+      $cools[] = round((float) $totalGrp['cntDlvr2'], 2);
     }
 
-    $writer->writeSheetRow(
-      'Sheet1',
-      $cools,
-      $rowOptions
-    );
+    $writer->writeSheetRow('Sheet1', $cools, $rowOptions);
   }
 
   function calcTotal(&$total, &$groupTotal) {
