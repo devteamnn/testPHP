@@ -5,4 +5,15 @@
 			"path": "."
 		}
 	],
+  "settings":
+  {
+      "xdebug": {
+          "path_mapping": {
+            "/var/www/html/": "D:/USERS/kds/Documents/DEV/testPHP/",
+          },
+          "url": "http://192.168.56.10/test.php",
+          "super_globals": true,
+          "close_on_stop": true
+      }
+  }
 }

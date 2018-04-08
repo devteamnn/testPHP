@@ -17,6 +17,7 @@
   require_once 'make_reports/remains_make_xlsx.php';
   require_once 'make_reports/remains_make_pdf.php';
 
+  require_once 'make_reports/turnover_make_xlsx.php';
   require_once 'make_reports/turnover_make_pdf.php';
 
 
@@ -28,7 +29,9 @@
   // echo nameSpaceRemainsMakePdf\remainsMakePdf($data, '111', $par);
 
   $data = turnoverGetData();
-  $par = '[p01,p02]';
+  $par = '[p02,p01]';
   // $par = '';
 
-  echo nameSpaceTurnoverMakePdf\turnoverMakePdf($data, '111', $par);
+  echo nameSpaceTurnoverMakeXlsx\turnoverMakeXlsx($data, '111', $par);
+  // echo nameSpaceTurnoverMakePdf\turnoverMakePdf($data, '111', $par);
+
