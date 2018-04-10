@@ -1,7 +1,6 @@
 <?php
-// для ввода в продакшн изменить путь в строке 474
 namespace {
-  require_once 'make_reports/external_scripts/xlsxwriter.class.php';
+  require_once 'external_scripts/xlsxwriter.class.php';
 };
 
 namespace nameSpaceRemainsMakeXlsx {
@@ -488,9 +487,8 @@ namespace nameSpaceRemainsMakeXlsx {
     drawTotal($writer, $total, $par);
 
     $name = getFileName('Remains', $data['current_time'], 'xlsx');
-    // $fileName = 'users/' . $directory . '/reports/' . $name;
-    $fileName = 'reports/' . $name;
-
+    $fileName = 'users/' . $directory . '/reports/' . $name;
+  
     $writer->writeToFile($fileName);
 
     if (file_exists($fileName)) {

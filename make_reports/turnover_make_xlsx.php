@@ -1,6 +1,6 @@
 <?php
   namespace {
-  require_once 'make_reports/external_scripts/xlsxwriter.class.php';
+  require_once 'external_scripts/xlsxwriter.class.php';
 };
 
 namespace nameSpaceTurnoverMakeXlsx {
@@ -20,7 +20,7 @@ namespace nameSpaceTurnoverMakeXlsx {
       '           '=>'GENERAL'
     );
 
-    $col_options = ['widths'=>[6, 18, 24, 12, 12, 12, 12, 12, 12, 12, 12]];
+    $col_options = ['widths'=>[4, 19, 32, 12, 12, 10, 10, 10, 10, 10, 10]];
 
     $writer->writeSheetHeader('Sheet1', $header, $col_options);
   }
@@ -485,9 +485,8 @@ namespace nameSpaceTurnoverMakeXlsx {
     drawTotal($writer, $total, $par);
 
     $name = getFileName('Turnover', 'xlsx');
-    // $fileName = 'users/' . $directory . '/reports/' . $name;
-    $fileName = 'reports/' . $name;
-
+    $fileName = 'users/' . $directory . '/reports/' . $name;
+    
     $writer->writeToFile($fileName);
 
     if (file_exists($fileName)) {

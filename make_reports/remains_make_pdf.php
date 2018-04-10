@@ -1,10 +1,14 @@
 <?php
-// для ввода в продакшн изменить путь в строках 95, 97
 namespace nameSpaceRemainsMakePdf;
 
 require_once 'markup/remains--make-pdf.php';
 
+$command = 'wkhtmltopdf --encoding utf-8 ';
+$countPar = 0;
+
 function drawTableHeader(&$par) {
+    global $countPar;
+
     $col = '<col><col><col><col>';
     $row1 = '<td rowspan="2">№</td><td rowspan="2">Группа</td><td rowspan="2">Наименование</td><td rowspan="2">Количество</td>';
     $row2 = '';
@@ -12,24 +16,29 @@ function drawTableHeader(&$par) {
     if (validate_parametr($par, 'p04')) {
       $row1 .= '<td rowspan="2">Текущая цена закупки</td>';
       $col .= '<col>';
+      $countPar++;
     }
     if (validate_parametr($par, 'p05')) {
       $row1 .= '<td rowspan="2">Текущая цена продажи</td>';
       $col .= '<col>';
+      $countPar++;
     }
     if (validate_parametr($par, 'p02')) {
       $row1 .= '<td rowspan="2">На сумму по закупке</td>';
       $col .= '<col>';
+      $countPar++;
     }
     if (validate_parametr($par, 'p03')) {
       $row1 .= '<td rowspan="2">На сумму по продаже</td>';
       $col .= '<col>';
+      $countPar++;
     }
     if (validate_parametr($par, 'p01')) {
       $row1 .= '<td colspan="2">Доставка</td>';
       $row2 .= '<td>Ожидает<br>поступления на<br>склад</td>';
       $row2 .= '<td>Ожидает<br>отправки<br>получателю</td>';
       $col .= '<col>';
+      $countPar++;
     }
 
     $row = '<tr class="header">' . $row1 . '</tr><tr class="header">' . $row2 . '</tr>';
@@ -108,17 +117,21 @@ function drawTotal(&$total, &$par) {
 }
 
 function writeFile($name, $directory, &$htmlCode) {
-  // $tmpName = 'api/v1/lopos_functions/reports/make_reports/temp/' . $name . '.html';
-  $tmpName = 'make_reports/temp/' . $name . '.html';
-  // $fileName = 'users/' . $directory . '/reports/' . $name;
-  $fileName = 'reports/' . $name;
+  global $command;
+  global $countPar;
+
+  $tmpName = 'users/' . $directory . '/reports/' . $name . '.html';
+  $fileName = 'users/' . $directory . '/reports/' . $name;
 
   $file = fopen($tmpName, 'w+');
   fputs($file, $htmlCode);
   fclose($file);
 
-  $cmd = 'make_reports/external_scripts/wkhtmltox/bin/wkhtmltopdf --encoding utf-8 -O Landscape '
-    . $tmpName . ' ' . $fileName ;
+  if ($countPar > 0) {
+    $command .= '-O Landscape ';
+  }
+
+  $cmd = $command . $tmpName . ' ' . $fileName ;
 
   exec($cmd);
   unlink($tmpName);

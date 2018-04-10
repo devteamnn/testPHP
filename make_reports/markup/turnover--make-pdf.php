@@ -15,6 +15,7 @@ function markupDrawDocHeader($business, $stock, $dateStart, $dateEnd){
 
         table {
           border-collapse: collapse;
+          width: 100%;
 
         }
 

@@ -1,50 +1,57 @@
 <?php
-// для ввода в продакшн изменить путь в строках 125, 127
 namespace nameSpaceTurnoverMakePdf;
 
 require_once 'markup/turnover--make-pdf.php';
 
+$command = 'wkhtmltopdf --encoding utf-8 ';
+$countPar = 0;
+
 function drawTableHeader(&$par) {
-    $col = '<col><col><col><col><col><col>';
-    $row1 = '<td rowspan="2">№</td><td rowspan="2">Группа</td>
-        <td rowspan="2">Наименование</td><td>Начало периода</td>';
-    $row2 = '<td>Кол-во:</td>';
-    $row2End = '';
+  global $command;
+  global $countPar;
 
-    $endColumnLen = 1;
+  $col = '<col><col><col><col><col><col>';
+  $row1 = '<td rowspan="2">№</td><td rowspan="2">Группа</td>
+      <td rowspan="2">Наименование</td><td>Начало периода</td>';
+  $row2 = '<td>Кол-во:</td>';
+  $row2End = '';
 
-    if (validate_parametr($par, 'p01')) {
-      $row1 .= '<td colspan="2">Приход / Закупка</td>';
-      $row2 .= '<td>Кол-во:</td><td>Сумма:</td>';
-      $row2End .= '<td>Сумма по приходу:</td>';
-      $col .= '<col><col><col>';
-      $endColumnLen ++;
-    } else {
-      $row1 .= '<td>Приход / Закупка</td>';
-      $row2 .= '<td>Кол-во:</td>';
-      $col .= '<col>';
-    }
+  $endColumnLen = 1;
 
-    if (validate_parametr($par, 'p02')) {
-      $row1 .= '<td colspan="2">Расход / Продажа</td>';
-      $row2 .= '<td>Кол-во:</td><td>Сумма:</td>';
-      $row2End .= '<td>Сумма по расходу:</td>';
-      $col .= '<col><col><col>';
-      $endColumnLen ++;
-    } else {
-      $row1 .= '<td>Расход / Продажа</td>';
-      $row2 .= '<td>Кол-во:</td>';
-      $col .= '<col>';
-    }
+  if (validate_parametr($par, 'p01')) {
+    $row1 .= '<td colspan="2">Приход / Закупка</td>';
+    $row2 .= '<td>Кол-во:</td><td>Сумма:</td>';
+    $row2End .= '<td>Сумма по приходу:</td>';
+    $col .= '<col><col><col>';
+    $endColumnLen ++;
+    $countPar++;
+  } else {
+    $row1 .= '<td>Приход / Закупка</td>';
+    $row2 .= '<td>Кол-во:</td>';
+    $col .= '<col>';
+  }
+
+  if (validate_parametr($par, 'p02')) {
+    $row1 .= '<td colspan="2">Расход / Продажа</td>';
+    $row2 .= '<td>Кол-во:</td><td>Сумма:</td>';
+    $row2End .= '<td>Сумма по расходу:</td>';
+    $col .= '<col><col><col>';
+    $endColumnLen ++;
+    $countPar++;
+  } else {
+    $row1 .= '<td>Расход / Продажа</td>';
+    $row2 .= '<td>Кол-во:</td>';
+    $col .= '<col>';
+  }
 
 
-    $row1 .= '<td colspan=' . $endColumnLen . '>Конец периода</td>';
-    $row2 .= '<td>Кол-во:</td>' . $row2End;
+  $row1 .= '<td colspan=' . $endColumnLen . '>Конец периода</td>';
+  $row2 .= '<td>Кол-во:</td>' . $row2End;
 
-    $row = '<tr class="header">' . $row1 . '</tr><tr class="header">' .
-      $row2 . '</tr>';
+  $row = '<tr class="header">' . $row1 . '</tr><tr class="header">' .
+    $row2 . '</tr>';
 
-    return ['col' => $col, 'header' => $row];
+  return ['col' => $col, 'header' => $row];
 }
 
 function drawData(&$htmlDoc, &$data, &$par) {
@@ -138,17 +145,21 @@ function drawTotal(&$total, &$par) {
 }
 
 function writeFile($name, $directory, &$htmlCode) {
-  // $tmpName = 'api/v1/lopos_functions/reports/make_reports/temp/' . $name . '.html';
-  $tmpName = 'make_reports/temp/' . $name . '.html';
-  // $fileName = 'users/' . $directory . '/reports/' . $name;
-  $fileName = 'reports/' . $name;
+  global $command;
+  global $countPar;
+
+  $tmpName = 'users/' . $directory . '/reports/' . $name . '.html';
+  $fileName = 'users/' . $directory . '/reports/' . $name;
 
   $file = fopen($tmpName, 'w+');
   fputs($file, $htmlCode);
   fclose($file);
 
-  $cmd = 'make_reports/external_scripts/wkhtmltox/bin/wkhtmltopdf --encoding utf-8 -O Landscape '
-    . $tmpName . ' ' . $fileName ;
+  if ($countPar > 0) {
+    $command .= '-O Landscape ';
+  }
+
+  $cmd = $command . $tmpName . ' ' . $fileName ;
 
   exec($cmd);
   unlink($tmpName);
