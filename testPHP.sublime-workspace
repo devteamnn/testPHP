@@ -4,12 +4,52 @@
 		"selected_items":
 		[
 			[
-				"va",
-				"var"
+				"co",
+				"count"
 			],
 			[
-				"co",
-				"cools"
+				"html",
+				"htmlDoc"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"border-co",
+				"border-collapse"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"met",
+				"meta\tTag"
+			],
+			[
+				"h",
+				"h4\tTag"
+			],
+			[
+				"H",
+				"H4\tTag"
+			],
+			[
+				"va",
+				"var"
 			],
 			[
 				"c",
@@ -84,14 +124,6 @@
 				"foreach\tforeach …"
 			],
 			[
-				"h",
-				"htmlDoc"
-			],
-			[
-				"marg",
-				"margin-bottom"
-			],
-			[
 				"l",
 				"li\tTag"
 			],
@@ -150,10 +182,6 @@
 			[
 				"margin",
 				"margin-bottom"
-			],
-			[
-				"mar",
-				"margin"
 			],
 			[
 				"ma",
@@ -320,38 +348,12 @@
 	"buffers":
 	[
 		{
-			"file": "index.php",
+			"file": "make_reports/markup/naklad--make-pdf.php",
 			"settings":
 			{
-				"buffer_size": 1057,
+				"buffer_size": 2636,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "make_reports/turnover_make_xlsx.php",
-			"settings":
-			{
-				"buffer_size": 14432,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "make_reports/remains_make_xlsx.php",
-			"settings":
-			{
-				"buffer_size": 15320,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "$cools[] = round((float) $total['purchased_sum'], 2);\n\nnumber_format",
-			"settings":
-			{
-				"buffer_size": 68,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -368,7 +370,7 @@
 		[
 			[
 				"Package Control: ",
-				"Package Control: Install Package"
+				"Package Control: List Unmanaged Packages"
 			],
 			[
 				"Package Co",
@@ -379,7 +381,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 392.0
+		"width": 428.0
 	},
 	"console":
 	{
@@ -401,12 +403,24 @@
 	"expanded_folders":
 	[
 		"/D/USERS/kds/Documents/DEV/testPHP",
-		"/D/USERS/kds/Documents/DEV/testPHP/make_reports",
-		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/temp",
-		"/D/USERS/kds/Documents/DEV/testPHP/program_data"
+		"/D/USERS/kds/Documents/DEV/testPHP/reports"
 	],
 	"file_history":
 	[
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/nakladData.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/index.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/naklad_make_pdf.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/markup/naklad--make-pdf.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/remains_make_pdf.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/html.html",
+		"/C/Users/kds/AppData/Local/Temp/_dc1779929014/naklad_excel.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/turnover_make_xlsx.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/testPHP.sublime-project",
+		"/C/Users/kds/AppData/Local/Temp/_dc1635632719/naklad_pdf.php",
+		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/SublimeTextXdebug-master/Xdebug.sublime-settings",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/remains_make_xlsx.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/test.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/turnover_make_pdf.php",
 		"/C/Users/kds/AppData/Local/Temp/7zO4931128A/sheet1.xml",
@@ -419,28 +433,21 @@
 		"/D/USERS/kds/Desktop/test1/xl/styles.xml",
 		"/D/USERS/kds/Desktop/test1/[Content_Types].xml",
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/external_scripts/xlsxwriter.class.php",
-		"/D/USERS/kds/Documents/DEV/testPHP/testPHP.sublime-project",
-		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
 		"/D/USERS/kds/Desktop/Turnover_07_04_3905.pdf.html",
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/temp/html.html",
-		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/remains_make_pdf.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/program_data/turnoverData.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/markup/remains--make-pdf.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/markup/turnover--make-pdf.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/program_data/remainsData.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/program_data/Turnover_data.txt",
 		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/SublimeTextXdebug/Xdebug.sublime-settings",
-		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/remains_make_xlsx.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/sftp-config.json",
-		"/D/USERS/kds/Documents/DEV/testPHP/index.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/remains_make_xlsx.php",
-		"/D/USERS/kds/Documents/DEV/testPHP/html.html",
 		"/D/USERS/kds/Documents/DEV/testPHP/remains_make_pdf.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/markup/remains--make-pdf.php",
 		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
 		"/D/USERS/kds/Documents/DEV/testPHP/markup/remains--makepdf-header.php",
 		"/D/USERS/kds/Desktop/html.html",
-		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
 		"/D/USERS/kds/Documents/DEV/testPHP/ftp",
 		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations__sale.js",
 		"/D/USERS/kds/Documents/DEV/lopos/src/js/main.js",
@@ -527,14 +534,7 @@
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/reCaptcha.js",
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/login.html",
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID/build/index.html",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/xhr.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/test.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/settings.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/README.md",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/gulpfile.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/xch.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/js/xhr.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/js/script.js"
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/xhr.js"
 	],
 	"find":
 	{
@@ -552,6 +552,15 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"date",
+			"data",
+			"<?",
+			"writeFile",
+			"\n    ",
+			"</b>",
+			"<b>",
+			"b",
+			"caption",
 			"markMergedCell",
 			"number_format",
 			"@",
@@ -670,16 +679,7 @@
 			"tradeForm.delivery",
 			"tradeForm.kontragents",
 			"tradeForm",
-			"tradeForm.stock",
-			"tradeForm",
-			"tradeForm.submit.disabled",
-			"tradeForm",
-			"ЗАКУПКА",
-			"getGoodsCallback",
-			"drawGoods",
-			"drawGro",
-			"leftPurchaseColumn",
-			"operations-purchase-modal-goods"
+			"tradeForm.stock"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -687,6 +687,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"</span>",
+			"<span class=\"bold\">",
+			"span",
+			"header",
 			"GENERAL",
 			"(float) $row['st_count'], 2",
 			"",
@@ -796,103 +800,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1057,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								915,
-								915
-							]
-						],
-						"settings":
-						{
-							"SL.14.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.47.region_keys":
-							[
-							],
-							"SL.62.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"rulers":
-							[
-								80
-							],
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "make_reports/turnover_make_xlsx.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14432,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9531,
-								9531
-							]
-						],
-						"settings":
-						{
-							"SL.135.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.31.region_keys":
-							[
-							],
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		},
 		{
@@ -900,39 +809,26 @@
 			"sheets":
 			[
 				{
-					"buffer": 2,
-					"file": "make_reports/remains_make_xlsx.php",
+					"buffer": 0,
+					"file": "make_reports/markup/naklad--make-pdf.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15320,
+						"buffer_size": 2636,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4112,
-								4112
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"SL.17.region_keys":
+							"SL.119.region_keys":
 							[
-							],
-							"SL.19.region_keys":
-							[
-							],
-							"SL.21.region_keys":
-							[
-							],
-							"SL.32.region_keys":
-							[
-							],
-							"SL.51.region_keys":
-							[
-								"sublime_linter.protected_regions"
 							],
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
@@ -945,41 +841,10 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1320.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 68,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								68,
-								68
-							]
-						],
-						"settings":
-						{
-							"SL.136.region_keys":
-							[
-							],
-							"incomplete_sync": null,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1013,7 +878,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.588599752169,
 			1.0
 		],
 		"rows":
@@ -1041,7 +906,7 @@
 	},
 	"output.sftp":
 	{
-		"height": 119.0
+		"height": 265.0
 	},
 	"output.unsaved_changes":
 	{
@@ -1055,7 +920,7 @@
 	"project": "testPHP.sublime-project",
 	"replace":
 	{
-		"height": 74.0
+		"height": 73.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1085,7 +950,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 		"xdebug":
@@ -1093,32 +958,22 @@
 			"hide_conflict": false,
 			"restore_index":
 			{
-				"14":
+				"15":
 				{
 					"group": 0,
 					"index": 0
+				},
+				"16":
+				{
+					"group": 0,
+					"index": 1
 				},
 				"17":
 				{
 					"group": 1,
 					"index": 0
 				},
-				"18":
-				{
-					"group": 0,
-					"index": 1
-				},
-				"65":
-				{
-					"group": 1,
-					"index": 2
-				},
-				"66":
-				{
-					"group": 1,
-					"index": 1
-				},
-				"67":
+				"34":
 				{
 					"group": 0,
 					"index": 2
@@ -1144,7 +999,7 @@
 				"cols":
 				[
 					0.0,
-					0.581770833333,
+					0.5,
 					1.0
 				],
 				"rows":
@@ -1158,7 +1013,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 244.0,
 	"status_bar_visible": true,
 	"template_settings":
