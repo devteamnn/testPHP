@@ -13,12 +13,15 @@
 
   require_once 'program_data/remainsData.php';
   require_once 'program_data/turnoverData.php';
+  require_once 'program_data/nakladData.php';
 
   require_once 'make_reports/remains_make_xlsx.php';
   require_once 'make_reports/remains_make_pdf.php';
 
   require_once 'make_reports/turnover_make_xlsx.php';
   require_once 'make_reports/turnover_make_pdf.php';
+
+  require_once 'make_reports/naklad_make_pdf.php';
 
 
   $data = remainsGetData();
@@ -32,6 +35,9 @@
   $par = '[p01,p02 ]';
   // $par = '';
 
-  echo nameSpaceTurnoverMakeXlsx\turnoverMakeXlsx($data, '111', $par);
+  // echo nameSpaceTurnoverMakeXlsx\turnoverMakeXlsx($data, '111', $par);
   // echo nameSpaceTurnoverMakePdf\turnoverMakePdf($data, '111', $par);
+
+  $data = nakladGetData();
+  echo nameSpaceNakladMakePdf\nakladMakePdf($data, '111');
 
