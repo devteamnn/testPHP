@@ -348,10 +348,13 @@
 	"buffers":
 	[
 		{
-			"file": "make_reports/markup/naklad--make-pdf.php",
+			"contents": "<?php\n  ini_set('error_reporting', E_ALL);\n  ini_set('display_errors', 1);\n  ini_set('display_startup_errors', 1);\n\n  function validate_parametr($str, $parmetr) {\n    if (strpos($str, $parmetr) === false) {\n      return false;\n    } else {\n      return true;\n    }\n  }\n\n  require_once 'program_data/remainsData.php';\n  require_once 'program_data/turnoverData.php';\n  require_once 'program_data/nakladData.php';\n  require_once 'program_data/profitData.php';\n\n  require_once 'make_reports/remains_make_xlsx.php';\n  require_once 'make_reports/remains_make_pdf.php';\n\n  require_once 'make_reports/turnover_make_xlsx.php';\n  require_once 'make_reports/turnover_make_pdf.php';\n\n  require_once 'make_reports/naklad_make_pdf.php';\n\n  // $data = remainsGetData();\n  // $par = '[p01,p02,p03,p04,p05,p06]';\n  // $par = '[p01,p02,p03,p04,p05]';\n  // echo nameSpaceRemainsMakeXlsx\\remainsMakeXlsx($data, '11', $par);\n  // echo '<br>';\n  // echo nameSpaceRemainsMakePdf\\remainsMakePdf($data, '111', $par);\n\n  // $data = turnoverGetData();\n  // $par = '[p01,p02 ]';\n  // $par = '';\n\n  // echo nameSpaceTurnoverMakeXlsx\\turnoverMakeXlsx($data, '111', $par);\n  // echo nameSpaceTurnoverMakePdf\\turnoverMakePdf($data, '111', $par);\n\n  // $data = nakladGetData();\n  // echo nameSpaceNakladMakePdf\\nakladMakePdf($data, '111');\n\n  $data = profitGetData();\n  \n",
+			"file": "index.php",
+			"file_size": 1357,
+			"file_write_time": 131690496513567560,
 			"settings":
 			{
-				"buffer_size": 2636,
+				"buffer_size": 1338,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -403,19 +406,22 @@
 	"expanded_folders":
 	[
 		"/D/USERS/kds/Documents/DEV/testPHP",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data",
 		"/D/USERS/kds/Documents/DEV/testPHP/reports"
 	],
 	"file_history":
 	[
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/profitData.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/.gitignore",
+		"/D/USERS/kds/Documents/DEV/testPHP/testPHP.sublime-project",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/markup/naklad--make-pdf.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/program_data/nakladData.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/index.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/naklad_make_pdf.php",
-		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/markup/naklad--make-pdf.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/remains_make_pdf.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/html.html",
 		"/C/Users/kds/AppData/Local/Temp/_dc1779929014/naklad_excel.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/turnover_make_xlsx.php",
-		"/D/USERS/kds/Documents/DEV/testPHP/testPHP.sublime-project",
 		"/C/Users/kds/AppData/Local/Temp/_dc1635632719/naklad_pdf.php",
 		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
 		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
@@ -532,9 +538,7 @@
 		"/D/USERS/kds/Desktop/captcha.html",
 		"/D/USERS/kds/Desktop/invcaptcha.html",
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/reCaptcha.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/login.html",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/build/index.html",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/xhr.js"
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/login.html"
 	],
 	"find":
 	{
@@ -800,35 +804,37 @@
 	"groups":
 	[
 		{
-			"sheets":
-			[
-			]
-		},
-		{
 			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "make_reports/markup/naklad--make-pdf.php",
+					"file": "index.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2636,
+						"buffer_size": 1338,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1337,
+								1337
 							]
 						],
 						"settings":
 						{
-							"SL.119.region_keys":
+							"SL.15.region_keys":
 							[
+							],
+							"SL.19.region_keys":
+							[
+							],
+							"SL.46.region_keys":
+							[
+								"sublime_linter.protected_regions"
 							],
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
@@ -841,7 +847,7 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 138.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -852,7 +858,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 31.0
 	},
 	"input":
 	{
@@ -867,18 +873,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.588599752169,
 			1.0
 		],
 		"rows":
@@ -950,7 +949,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 		"xdebug":
@@ -958,25 +957,10 @@
 			"hide_conflict": false,
 			"restore_index":
 			{
-				"15":
+				"19":
 				{
 					"group": 0,
 					"index": 0
-				},
-				"16":
-				{
-					"group": 0,
-					"index": 1
-				},
-				"17":
-				{
-					"group": 1,
-					"index": 0
-				},
-				"34":
-				{
-					"group": 0,
-					"index": 2
 				}
 			},
 			"restore_layout":
@@ -999,7 +983,7 @@
 				"cols":
 				[
 					0.0,
-					0.5,
+					0.588599752169,
 					1.0
 				],
 				"rows":

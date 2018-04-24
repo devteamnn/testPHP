@@ -14,6 +14,7 @@
   require_once 'program_data/remainsData.php';
   require_once 'program_data/turnoverData.php';
   require_once 'program_data/nakladData.php';
+  require_once 'program_data/profitData.php';
 
   require_once 'make_reports/remains_make_xlsx.php';
   require_once 'make_reports/remains_make_pdf.php';
@@ -23,21 +24,23 @@
 
   require_once 'make_reports/naklad_make_pdf.php';
 
-
-  $data = remainsGetData();
+  // $data = remainsGetData();
   // $par = '[p01,p02,p03,p04,p05,p06]';
-  $par = '[p01,p02,p03,p04,p05]';
+  // $par = '[p01,p02,p03,p04,p05]';
   // echo nameSpaceRemainsMakeXlsx\remainsMakeXlsx($data, '11', $par);
   // echo '<br>';
   // echo nameSpaceRemainsMakePdf\remainsMakePdf($data, '111', $par);
 
-  $data = turnoverGetData();
-  $par = '[p01,p02 ]';
+  // $data = turnoverGetData();
+  // $par = '[p01,p02 ]';
   // $par = '';
 
   // echo nameSpaceTurnoverMakeXlsx\turnoverMakeXlsx($data, '111', $par);
   // echo nameSpaceTurnoverMakePdf\turnoverMakePdf($data, '111', $par);
 
-  $data = nakladGetData();
-  echo nameSpaceNakladMakePdf\nakladMakePdf($data, '111');
+  // $data = nakladGetData();
+  // echo nameSpaceNakladMakePdf\nakladMakePdf($data, '111');
+
+  $data = profitGetData();
+  var_export($data);
 
