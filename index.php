@@ -43,7 +43,7 @@
   // $data = nakladGetData();
   // echo nameSpaceNakladMakePdf\nakladMakePdf($data, '111');
 
-  $par = '[p01,p02 ]';
+  $par = '[p02]';
 
   $data = profitGetData();
   // echo '<pre>';print_r($data);

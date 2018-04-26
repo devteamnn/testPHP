@@ -1,1 +1,830 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"g",
+				"group"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"s",
+				"splice"
+			],
+			[
+				"ti",
+				"timeZoneOffset"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"cla",
+				"classList"
+			],
+			[
+				"re",
+				"remove"
+			],
+			[
+				"cl",
+				"classList"
+			],
+			[
+				"fput",
+				"fputs"
+			],
+			[
+				"ge",
+				"getLoadSpinner"
+			],
+			[
+				"m",
+				"markupTools"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"mi",
+				"min-width"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"data",
+				"dataStore"
+			],
+			[
+				"getData",
+				"getDataCallback"
+			],
+			[
+				"mo",
+				"modalAdd"
+			],
+			[
+				"remove",
+				"removeEventListener"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"goo",
+				"goodCard"
+			],
+			[
+				"sh",
+				"showGoodCard"
+			],
+			[
+				"foc",
+				"focusBarcode"
+			],
+			[
+				"current",
+				"operationTradeCurrentGoodOldCount"
+			],
+			[
+				"get",
+				"getSpan"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"sum",
+				"sumSale"
+			],
+			[
+				"to",
+				"toFixed"
+			],
+			[
+				"co",
+				"count"
+			],
+			[
+				"su",
+				"sumPurchase"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"lef",
+				"leftPurchaseColumn"
+			],
+			[
+				"mod",
+				"modalGroup"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"i",
+				"img"
+			],
+			[
+				"va",
+				"variable"
+			],
+			[
+				"da",
+				"dataset"
+			],
+			[
+				"fo",
+				"formTools"
+			],
+			[
+				"evt",
+				"evt"
+			],
+			[
+				"forE",
+				"formReset"
+			],
+			[
+				"val",
+				"valid"
+			],
+			[
+				"ad",
+				"addEventListener"
+			],
+			[
+				"bu",
+				"buttonSubmit"
+			],
+			[
+				"hid",
+				"hideAlert"
+			],
+			[
+				"mb",
+				"mb-3"
+			],
+			[
+				"login",
+				"loginValid"
+			],
+			[
+				"e",
+				"errObj"
+			],
+			[
+				"d",
+				"div\tTag"
+			],
+			[
+				"c",
+				"capId"
+			],
+			[
+				"a",
+				"addEventListener"
+			],
+			[
+				"event",
+				"event"
+			],
+			[
+				"set",
+				"setStorage"
+			],
+			[
+				"se",
+				"sessionStorage"
+			],
+			[
+				"v",
+				"value"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"log",
+				"login"
+			],
+			[
+				"doc",
+				"document"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 1546,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "make_reports/profit_of_the_goods_exel.php",
+			"settings":
+			{
+				"buffer_size": 7538,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test.php",
+			"settings":
+			{
+				"buffer_size": 1023,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "make_reports/turnover_make_xlsx.php",
+			"settings":
+			{
+				"buffer_size": 14384,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Co",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Con",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 428.0
+	},
+	"console":
+	{
+		"height": 465.0,
+		"history":
+		[
+			"cl",
+			"clear"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/USERS/kds/Documents/DEV/testPHP",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports"
+	],
+	"file_history":
+	[
+		"/D/USERS/kds/Documents/DEV/testPHP/testPHP.sublime-project",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/markup/tools.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations__manufacture.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/accounting__all-docs.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/markup/reference__contractors-card.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/reference__contractors.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/index.html",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/accounting__reports.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/universal-bills-list.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/reference__contractors--add.js",
+		"/D/USERS/kds/Documents/DEV/loposReportsPHP/make_reports/turnover_make_xlsx.php",
+		"/D/USERS/kds/Desktop/lopos-master-v1.2.2/lopos-master-3/src/.DS_Store",
+		"/D/USERS/kds/Documents/DEV/lopos2/src/index.html",
+		"/D/USERS/kds/Documents/DEV/loposReportsPHP/turnover_of_the_goods_excel.php",
+		"/D/USERS/kds/Documents/DEV/loposReportsPHP/remains_of_the_goods_excel.php",
+		"/D/USERS/kds/Documents/DEV/loposReportsPHP/turnover_of_the_goods_pdf.php",
+		"/D/USERS/kds/Documents/DEV/loposReportsPHP/remains_of_the_goods_pdf.php",
+		"/D/USERS/kds/Documents/DEV/loposReportsPHP/make_reports/remains_make_pdf.php",
+		"/D/USERS/kds/Documents/DEV/loposReportsPHP/make_reports/remains_make_xlsx.php",
+		"/D/USERS/kds/Documents/DEV/loposReportsPHP/make_reports/turnover_make_pdf.php",
+		"/D/USERS/kds/Documents/DEV/loposReportsPHP/make_reports/markup/remains--make-pdf.php",
+		"/D/USERS/kds/Documents/DEV/loposReportsPHP/make_reports/markup/turnover--make-pdf.php",
+		"/D/USERS/kds/Documents/DEV/loposReportsPHP/report_validate_func.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/turnover.json",
+		"/D/USERS/kds/Documents/DEV/loposReportsPHP/remains_make_xlsx.php",
+		"/D/USERS/kds/Documents/DEV/loposReportsPHP/sftp-config.json",
+		"/D/USERS/kds/Desktop/222/remains_make_xlsx.php",
+		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/D/USERS/kds/Documents/DEV/testPHP/remains_make_xlsx.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/sftp-config.json",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations__sale.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/main.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations__inventory.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog__cards.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/markup/catalog-cards.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations__purchase.js",
+		"/D/USERS/kds/Downloads/Telegram Desktop/catalog-cards.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/sass/components/operations-trade.scss",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations--left-column.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations--right-column.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations--header.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations--server-tools.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js-external/settings.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/tools/storage.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/markup/operation__trade.js",
+		"/D/USERS/kds/Documents/DEV/lopos/readme.md",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/tools/single-validation.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/tools/xhr.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog__goods.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/tools/tools.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations--good-add.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog__cards--add-edit.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog__cards--add-resource.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog__search-barcode--valid.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog-groups-edit.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog-groups-goods-stock.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog-groups-goods-express.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog-groups-add.js",
+		"/E/Описание установки.txt",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog-groups-goods-add.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog-groups--edit.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog-groups-goods-edit.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/tools/form-tools.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog__search-barcode.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog__search--valid.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog__search.js",
+		"/D/USERS/kds/Desktop/11.html",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog-groups-goods.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog-groups.js",
+		"/D/USERS/kds/Documents/DEV/11111/src/js/buttons/catalog-groups.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog-groups-cards.js",
+		"/D/USERS/kds/Documents/DEV/lopos — копия/src/js-external/metrika.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog-groups-goods-express-edit.js",
+		"/D/USERS/kds/Documents/DEV/lopos/lopos.sublime-project",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/lopos-id.sublime-project",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/buttons/reference-points-add.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/buttons/reference-keywords-edit.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/buttons/reference-keywords-add.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/buttons/reference-enterprises-edit.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/main.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/buttons/reference-enterprises-add.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/buttons/reference-contractors-add.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/index.html",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js-external/settings.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/buttons/reference-points-edit.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/storage.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/buttons/reference-keywords.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/buttons/reference-contractors.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/passwd",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/buttons/reference-enterprises.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src2/index.html",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src2/js/buttons/reference-enterprises-edit.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src2/js-external/settings.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/main_login_window.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/form_register.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/forgot.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/confirm_email.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/register.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/login.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/passwd",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/js-external/settings.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/form_login.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/form_forgot.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/form_confirm_email.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/captcha.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/login.txt",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/settings/settings.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/js/login.js",
+		"/D/USERS/kds/Desktop/captcha.html",
+		"/D/USERS/kds/Desktop/invcaptcha.html",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/reCaptcha.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/login.html",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/build/index.html",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/xhr.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/test.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/settings.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/README.md",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/gulpfile.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/xch.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/js/xhr.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/js/script.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/build/js/xhr.js",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/css/README.md",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/sass/README.md",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/.babelrc",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js-external/README.md",
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/README.md"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 113.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1546,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1461,
+								1461
+							]
+						],
+						"settings":
+						{
+							"SL.14.region_keys":
+							[
+							],
+							"SL.32.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 308.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "make_reports/profit_of_the_goods_exel.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7538,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3137,
+								3137
+							]
+						],
+						"settings":
+						{
+							"SL.15.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.34.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1716.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "test.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1023,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								995,
+								995
+							]
+						],
+						"settings":
+						{
+							"SL.16.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.36.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 474.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "make_reports/turnover_make_xlsx.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14384,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4076,
+								4979
+							]
+						],
+						"settings":
+						{
+							"SL.17.region_keys":
+							[
+							],
+							"SL.35.region_keys":
+							[
+							],
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 330.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 145.0
+	},
+	"output.xdebug":
+	{
+		"height": 145.0
+	},
+	"pinned_build_system": "",
+	"project": "testPHP.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"14":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"15":
+				{
+					"group": 0,
+					"index": 1
+				},
+				"16":
+				{
+					"group": 0,
+					"index": 2
+				},
+				"17":
+				{
+					"group": 0,
+					"index": 3
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 314.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,9 +1,10 @@
 <?php
-  namespace {
+namespace {
   require_once 'external_scripts/xlsxwriter.class.php';
 };
 
 namespace nameSpaceProfitOfTheGoodsMakeXlsx {
+
   //  -------- Функции, формирующие документ --------
   function setupHeader(&$writer) {
     $header = array(
@@ -91,6 +92,63 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
     $writer->writeSheetRow('Sheet1',$headRow2, $rowOptions);
   }
 
+  function drawData(&$writer, $data, $par) {
+    // Здесьпоправить поля
+    $total = ['st_count'=>0,
+      'purchased_count'=>0,
+      'purchased_sum'=>0,
+      'sold_count'=>0,
+      'sold_sum'=>0,
+      'end_count'=>0,
+      'end_sum_purchase'=>0,
+      'end_sum_sell'=>0];
+
+      foreach ($data['content'] as $group) {
+
+        //нужно добавить рассчет столбцов перед сортировкой
+
+        if (validate_parametr($par, 'p02')) {
+          usort($group['group_content'],
+            "nameSpaceProfitOfTheGoodsMakeXlsx\cmpName");
+        } else if (validate_parametr($par, 'p03')) {
+          usort($group['group_content'],
+            "nameSpaceProfitOfTheGoodsMakeXlsx\cmpRent");
+        }
+
+        echo '<pre>';print_r($group['group_content']);
+
+      }
+
+
+
+
+      // foreach ($data['content'] as $group) {
+      //   $groupTotal = ['st_count'=>0,
+      //     'purchased_count'=>0,
+      //     'purchased_sum'=>0,
+      //     'sold_count'=>0,
+      //     'sold_sum'=>0,
+      //     'end_count'=>0,
+      //     'end_sum_purchase'=>0,
+      //     'end_sum_sell'=>0];
+
+      //   $newGroup = true;
+
+      //   foreach ($group['group_content'] as $key => $row) {
+      //     $groupName = $newGroup ? $group['group_name'] : '';
+      //     drawRow($writer, $key + 1, $row, $par, $groupName);
+      //     calcGroupTotal($groupTotal, $row);
+
+      //     $newGroup = false;
+      //   }
+
+      //   drawGroupTotal($writer, $groupTotal, $par);
+      //   calcTotal($total, $groupTotal);
+      // }
+
+      // return $total;
+  }
+
   //  -------- Вспомогательные функции --------
   function drawLogo(&$writer) {
     $rowOptions = ['valign'=>'center', 'halign'=>'center', 'font-style'=>'bold',
@@ -139,7 +197,6 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
         '', ''], $rowOptions);
   }
 
-
   function getFileName($prefix, $type) {
     function getRnd() {
       $genName = '';
@@ -171,6 +228,21 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
     return $name;
   }
 
+  function cmpName($a, $b) {
+    return strcasecmp($a['good_name'], $b['good_name']);
+  }
+
+  function cmpRent($a, $b) {
+    $a = (int) $a;
+    $b = (int) $b;
+
+    if ($a == $b) {
+      return 0;
+    }
+
+    return ($a < $b) ? -1 : 1;
+  }
+
   //  -------- MAIN --------
   function profitOfTheGoodsMakeXlsx($data, $directory, $par) {
     $writer = new \XLSXWriter();
@@ -184,7 +256,7 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
       $data['end_period']);
 
     drawTableHeader($writer, $par);
-    // $total = drawData($writer, $data, $par);
+    $total = drawData($writer, $data, $par);
     // drawSpace($writer);
     // drawTotal($writer, $total, $par);
 
