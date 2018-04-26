@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"var",
+				"var_export"
+			],
+			[
 				"co",
 				"count"
 			],
@@ -74,10 +78,6 @@
 			[
 				"r",
 				"row"
-			],
-			[
-				"var",
-				"var_dump"
 			],
 			[
 				"row",
@@ -348,15 +348,30 @@
 	"buffers":
 	[
 		{
-			"contents": "<?php\n  ini_set('error_reporting', E_ALL);\n  ini_set('display_errors', 1);\n  ini_set('display_startup_errors', 1);\n\n  function validate_parametr($str, $parmetr) {\n    if (strpos($str, $parmetr) === false) {\n      return false;\n    } else {\n      return true;\n    }\n  }\n\n  require_once 'program_data/remainsData.php';\n  require_once 'program_data/turnoverData.php';\n  require_once 'program_data/nakladData.php';\n  require_once 'program_data/profitData.php';\n\n  require_once 'make_reports/remains_make_xlsx.php';\n  require_once 'make_reports/remains_make_pdf.php';\n\n  require_once 'make_reports/turnover_make_xlsx.php';\n  require_once 'make_reports/turnover_make_pdf.php';\n\n  require_once 'make_reports/naklad_make_pdf.php';\n\n  // $data = remainsGetData();\n  // $par = '[p01,p02,p03,p04,p05,p06]';\n  // $par = '[p01,p02,p03,p04,p05]';\n  // echo nameSpaceRemainsMakeXlsx\\remainsMakeXlsx($data, '11', $par);\n  // echo '<br>';\n  // echo nameSpaceRemainsMakePdf\\remainsMakePdf($data, '111', $par);\n\n  // $data = turnoverGetData();\n  // $par = '[p01,p02 ]';\n  // $par = '';\n\n  // echo nameSpaceTurnoverMakeXlsx\\turnoverMakeXlsx($data, '111', $par);\n  // echo nameSpaceTurnoverMakePdf\\turnoverMakePdf($data, '111', $par);\n\n  // $data = nakladGetData();\n  // echo nameSpaceNakladMakePdf\\nakladMakePdf($data, '111');\n\n  $data = profitGetData();\n  \n",
 			"file": "index.php",
-			"file_size": 1357,
-			"file_write_time": 131690496513567560,
 			"settings":
 			{
-				"buffer_size": 1338,
+				"buffer_size": 1553,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "make_reports/profit_of_the_goods_exel.php",
+			"settings":
+			{
+				"buffer_size": 5774,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "make_reports/turnover_make_xlsx.php",
+			"settings":
+			{
+				"buffer_size": 14384,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -406,11 +421,15 @@
 	"expanded_folders":
 	[
 		"/D/USERS/kds/Documents/DEV/testPHP",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports",
 		"/D/USERS/kds/Documents/DEV/testPHP/program_data",
 		"/D/USERS/kds/Documents/DEV/testPHP/reports"
 	],
 	"file_history":
 	[
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/profitDataSerialize.txt",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/profitOfTheGoodsData.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/turnover_make_xlsx.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/program_data/profitData.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/.gitignore",
 		"/D/USERS/kds/Documents/DEV/testPHP/testPHP.sublime-project",
@@ -421,7 +440,6 @@
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/remains_make_pdf.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/html.html",
 		"/C/Users/kds/AppData/Local/Temp/_dc1779929014/naklad_excel.php",
-		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/turnover_make_xlsx.php",
 		"/C/Users/kds/AppData/Local/Temp/_dc1635632719/naklad_pdf.php",
 		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
 		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
@@ -536,13 +554,11 @@
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/settings/settings.js",
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/js/login.js",
 		"/D/USERS/kds/Desktop/captcha.html",
-		"/D/USERS/kds/Desktop/invcaptcha.html",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/reCaptcha.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/login.html"
+		"/D/USERS/kds/Desktop/invcaptcha.html"
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 45.0
 	},
 	"find_in_files":
 	{
@@ -556,6 +572,10 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"drawStock",
+			"drawBusiness",
+			"drawLogo",
+			"<?",
 			"date",
 			"data",
 			"<?",
@@ -679,11 +699,7 @@
 			"searchBarcodeForm.barcode",
 			"searchBarcodeForm",
 			"searchForm",
-			"tradeForm",
-			"tradeForm.delivery",
-			"tradeForm.kontragents",
-			"tradeForm",
-			"tradeForm.stock"
+			"tradeForm"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -813,19 +829,22 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1338,
+						"buffer_size": 1553,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1337,
-								1337
+								1466,
+								1466
 							]
 						],
 						"settings":
 						{
+							"SL.14.region_keys":
+							[
+							],
 							"SL.15.region_keys":
 							[
 							],
@@ -847,10 +866,96 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 138.0,
+						"translation.y": 434.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "make_reports/profit_of_the_goods_exel.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5774,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2507,
+								2507
+							]
+						],
+						"settings":
+						{
+							"SL.15.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.38.region_keys":
+							[
+							],
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 201.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "make_reports/turnover_make_xlsx.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14384,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3676,
+								3794
+							]
+						],
+						"settings":
+						{
+							"SL.16.region_keys":
+							[
+							],
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1380.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -858,11 +963,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 31.0
+		"height": 32.0
 	},
 	"input":
 	{
-		"height": 43.0
+		"height": 44.0
 	},
 	"layout":
 	{
@@ -873,11 +978,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.572189349112,
 			1.0
 		],
 		"rows":
@@ -998,7 +1110,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 244.0,
+	"side_bar_width": 168.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
