@@ -52,18 +52,18 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
   }
 
   function drawTableHeader(&$writer, $par) {
-     $rowOptions = ['height'=>40];
+    $rowOptions = ['height'=>40];
 
-     for ($i = 0; $i < 10; $i++) {
-        $rowOptions[] = ($i === 0) ?
-          ['valign'=>'center',
-            'halign'=>'center', 'wrap_text'=> true, 'fill'=>'#D3FEE8',
-            'font-style'=>'bold', 'border'=>'left,right,top,bottom',
-            'border-style'=>'thin'] :
-          ['valign'=>'center',
-            'halign'=>'center', 'wrap_text'=> true, 'fill'=>'#D3FEE8',
-            'font-style'=>'bold', 'border'=>'top,right,bottom',
-            'border-style'=>'thin'];
+    for ($i = 0; $i < 10; $i++) {
+      $rowOptions[] = ($i === 0) ?
+        ['valign'=>'center',
+          'halign'=>'center', 'wrap_text'=> true, 'fill'=>'#D3FEE8',
+          'font-style'=>'bold', 'border'=>'left,right,top,bottom',
+          'border-style'=>'thin'] :
+        ['valign'=>'center',
+          'halign'=>'center', 'wrap_text'=> true, 'fill'=>'#D3FEE8',
+          'font-style'=>'bold', 'border'=>'top,right,bottom',
+          'border-style'=>'thin'];
      }
 
     $headRow1 = ['№', 'Группа', 'Наименование', 'Кол-во',
@@ -93,60 +93,82 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
   }
 
   function drawData(&$writer, $data, $par) {
-    // Здесьпоправить поля
-    $total = ['st_count'=>0,
-      'purchased_count'=>0,
-      'purchased_sum'=>0,
-      'sold_count'=>0,
-      'sold_sum'=>0,
-      'end_count'=>0,
-      'end_sum_purchase'=>0,
-      'end_sum_sell'=>0];
+    $total = ['count' => 0,
+      'totalPurchase' => 0,
+      'totalSell' => 0,
+      'profit' => 0];
 
       foreach ($data['content'] as $group) {
 
-        //нужно добавить рассчет столбцов перед сортировкой
+        calcProfitAndRent($group);
 
         if (validate_parametr($par, 'p02')) {
           usort($group['group_content'],
-            "nameSpaceProfitOfTheGoodsMakeXlsx\cmpName");
+            "nameSpaceProfitOfTheGoodsMakeXlsx\callbackCmpName");
+
         } else if (validate_parametr($par, 'p03')) {
           usort($group['group_content'],
-            "nameSpaceProfitOfTheGoodsMakeXlsx\cmpRent");
+            "nameSpaceProfitOfTheGoodsMakeXlsx\callbackCmpRent");
         }
 
-        echo '<pre>';print_r($group['group_content']);
+        $groupTotal = ['count' => 0,
+          'totalPurchase' => 0,
+          'totalSell' => 0,
+          'profit' => 0];
 
+        drawGroupName($writer, $group['group_name']);
+
+        foreach ($group['group_content'] as $key => $good) {
+
+          $goodCount = (isset($good['good_count'])) ? $good['good_count'] : 0;
+          $totalPrch = (isset($good['total_purchase'])) ? $good['total_purchase'] : 0;
+          $totalSell = (isset($good['total_sell'])) ? $good['total_sell'] : 0;
+
+          $groupTotal['count'] = round($groupTotal['count'] + $goodCount, 2);
+          $groupTotal['totalPurchase'] = round($groupTotal['totalPurchase'] + $totalPrch, 2);
+          $groupTotal['totalSell'] = round($groupTotal['totalSell'] + $totalSell, 2);
+          $groupTotal['profit'] = round($groupTotal['profit'] + $good['profit'], 2);
+
+          drawGood($writer, $good, $key + 1, validate_parametr($par, 'p01'));
+        }
+
+        drawGroupTotal($writer, $groupTotal);
+
+        $total['count'] = round($total['count'] + $groupTotal['count'], 2);
+        $total['totalPurchase'] =
+          round($total['totalPurchase'] + $groupTotal['totalPurchase'], 2);
+        $total['totalSell'] =
+          round($total['totalSell'] + $groupTotal['totalSell'], 2);
+        $total['profit'] = round($total['profit'] + $groupTotal['profit'], 2);
       }
 
+      return $total;
+  }
 
+  function drawTotal(&$writer, $total) {
+    $rowOptions =['height'=>20];
 
+    for ($i = 0; $i < 9; $i++) {
+      if ($i === 0) {
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'center'];
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
+          'font-style'=>'bold', 'border'=>'left,top,bottom', 'fill'=>'#D3FEE8',
+          'color'=>'#004200', 'border-style'=>'thin'];
+      } else if ($i === 8) {
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
+          'font-style'=>'bold', 'border'=>'right,top,bottom', 'fill'=>'#D3FEE8',
+          'color'=>'#004200', 'border-style'=>'thin'];
+      } else {
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
+          'font-style'=>'bold', 'border'=>'top,bottom', 'fill'=>'#D3FEE8',
+          'color'=>'#004200', 'border-style'=>'thin'];
+      }
+    }
 
-      // foreach ($data['content'] as $group) {
-      //   $groupTotal = ['st_count'=>0,
-      //     'purchased_count'=>0,
-      //     'purchased_sum'=>0,
-      //     'sold_count'=>0,
-      //     'sold_sum'=>0,
-      //     'end_count'=>0,
-      //     'end_sum_purchase'=>0,
-      //     'end_sum_sell'=>0];
+    $cools = ['', 'Итог', '', $total['count'], '', $total['totalPurchase'],
+      '', $total['totalSell'], $total['profit'], ''];
 
-      //   $newGroup = true;
-
-      //   foreach ($group['group_content'] as $key => $row) {
-      //     $groupName = $newGroup ? $group['group_name'] : '';
-      //     drawRow($writer, $key + 1, $row, $par, $groupName);
-      //     calcGroupTotal($groupTotal, $row);
-
-      //     $newGroup = false;
-      //   }
-
-      //   drawGroupTotal($writer, $groupTotal, $par);
-      //   calcTotal($total, $groupTotal);
-      // }
-
-      // return $total;
+    $writer->writeSheetRow('Sheet1', $cools, $rowOptions);
   }
 
   //  -------- Вспомогательные функции --------
@@ -197,6 +219,127 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
         '', ''], $rowOptions);
   }
 
+  function drawGroupName(&$writer, $grpName) {
+    $rowOptions = ['height'=>20,];
+
+    for ($i = 0; $i < 10; $i++) {
+      if ($i === 0) {
+        $rowOptions[] = ['valign'=>'center',
+          'halign'=>'center', 'wrap_text'=> true, 'font-style'=>'bold',
+          'border'=>'left,top,bottom', 'border-style'=>'thin', 'fill'=>'#E5E5E5'];
+      } else if ($i === 9) {
+        $rowOptions[] = ['valign'=>'center',
+          'halign'=>'center', 'wrap_text'=> true, 'font-style'=>'bold',
+          'border'=>'right,top,bottom', 'border-style'=>'thin', 'fill'=>'#E5E5E5'];
+      } else {
+        $rowOptions[] = ['valign'=>'center',
+          'halign'=>'center', 'wrap_text'=> true, 'font-style'=>'bold',
+          'border'=>'top,bottom', 'border-style'=>'thin', 'fill'=>'#E5E5E5'];
+      }
+    }
+
+    $writer->writeSheetRow(
+      'Sheet1',
+      ['', $grpName, '', '', '', '', '', '', '', ''],
+      $rowOptions
+    );
+  }
+
+  function drawGood(&$writer, $good, $key, $ext) {
+    $rowOptions = [];
+
+    for ($i = 0; $i < 10; $i++) {
+      if ($i === 0) {
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
+          'border'=>'left,right', 'border-style'=>'thin'];
+      } if ($i === 1) {
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'left',
+          'border'=>'right', 'border-style'=>'thin'];
+      }else {
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
+          'border'=>'right', 'border-style'=>'thin'];
+      }
+    }
+
+    $cools = [$key,
+      '',
+      $good['good_name'],
+      (isset($good['good_count'])) ? round((float) $good['good_count'], 2) : '',
+      (isset($good['price_purchase'])) ? round((float) $good['price_purchase'], 2) : '',
+      (isset($good['total_purchase'])) ? round((float) $good['total_purchase'], 2) : '',
+      (isset($good['price_sell'])) ? round((float) $good['price_sell'], 2) : '',
+      (isset($good['total_sell'])) ? round((float) $good['total_sell'], 2) : '',
+      $good['profit'],
+      $good['rent']];
+
+    $writer->writeSheetRow('Sheet1', $cools, $rowOptions);
+
+    if ($ext) {
+      drawInvoice($writer, $good['naklads']);
+    }
+  }
+
+  function drawInvoice(&$writer, &$invoice) {
+    $rowOptions = [];
+
+    for ($i = 0; $i < 10; $i++) {
+      if ($i === 0) {
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
+          'border'=>'left,right', 'border-style'=>'thin'];
+      } if ($i === 1) {
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'right',
+          'border'=>'right', 'border-style'=>'thin'];
+      }else {
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
+          'border'=>'right', 'border-style'=>'thin'];
+      }
+    }
+
+    foreach ($invoice as $value) {
+      $cools = ['', '', 'Накладная № ' . $value['naklad'],
+      (isset($value['good_count'])) ?
+        round((float) $value['good_count'], 2) : '',
+      (isset($value['price_purchase'])) ?
+        round((float) $value['price_purchase'], 2) : '',
+      (isset($value['total_purchase'])) ?
+        round((float) $value['total_purchase'], 2) : '',
+      (isset($value['price_sell'])) ?
+        round((float) $value['price_sell'], 2) : '',
+      (isset($value['total_sell'])) ?
+        round((float) $value['total_sell'], 2) : '',
+      '', ''];
+
+    $writer->writeSheetRow('Sheet1', $cools, $rowOptions);
+    }
+  }
+
+  function drawGroupTotal(&$writer, &$groupTotal) {
+    $rowOptions =['height'=>20];
+
+    for ($i = 0; $i < 10; $i++) {
+      if ($i === 0) {
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
+          'border'=>'left,top,bottom', 'color'=>'#004200',
+          'border-style'=>'thin'];
+      } else if ($i === 9) {
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
+          'border'=>'right,top,bottom', 'color'=>'#004200',
+          'border-style'=>'thin'];
+      } else {
+        $rowOptions[] = ['valign'=>'center', 'halign'=>'center',
+          'font-style'=>'bold', 'border'=>'top,bottom', 'color'=>'#004200',
+          'border-style'=>'thin'];
+      }
+    }
+
+    $cools = ['', 'Подытог', '', $groupTotal['count'], '',
+      $groupTotal['totalPurchase'], '', $groupTotal['totalSell'],
+      $groupTotal['profit'], ''];
+
+    $writer->writeSheetRow('Sheet1', $cools, $rowOptions);
+
+  }
+
   function getFileName($prefix, $type) {
     function getRnd() {
       $genName = '';
@@ -228,13 +371,13 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
     return $name;
   }
 
-  function cmpName($a, $b) {
+  function callbackCmpName($a, $b) {
     return strcasecmp($a['good_name'], $b['good_name']);
   }
 
-  function cmpRent($a, $b) {
-    $a = (int) $a;
-    $b = (int) $b;
+  function callbackCmpRent($a, $b) {
+    $a = (double) $a;
+    $b = (double) $b;
 
     if ($a == $b) {
       return 0;
@@ -242,6 +385,20 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
 
     return ($a < $b) ? -1 : 1;
   }
+
+  function calcProfitAndRent(&$goodsForGrp) {
+    foreach ($goodsForGrp['group_content'] as $key => $good) {
+      $totalSell = (float) $good['total_sell'];
+      $totalPurchase = (float) $good['total_purchase'];
+
+      $goodsForGrp['group_content'][$key]['profit'] =
+        round($totalSell - $totalPurchase, 2);
+      $goodsForGrp['group_content'][$key]['rent'] =
+        ($totalPurchase == 0) ? 0 :
+          round(($totalSell / $totalPurchase) * 100 - 100, 2);
+    }
+  }
+
 
   //  -------- MAIN --------
   function profitOfTheGoodsMakeXlsx($data, $directory, $par) {
@@ -257,8 +414,8 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
 
     drawTableHeader($writer, $par);
     $total = drawData($writer, $data, $par);
-    // drawSpace($writer);
-    // drawTotal($writer, $total, $par);
+    drawSpace($writer);
+    drawTotal($writer, $total);
 
     $name = getFileName('ProfitGoods', 'xlsx');
     // $fileName = 'users/' . $directory . '/reports/' . $name;
@@ -271,6 +428,5 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
     }
 
     return false;
-
   }
 }
