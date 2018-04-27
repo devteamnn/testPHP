@@ -4,48 +4,176 @@
 		"selected_items":
 		[
 			[
+				"gr",
+				"groupTotal"
+			],
+			[
+				"ren",
+				"rent"
+			],
+			[
+				"fo",
+				"foreach\tforeach …"
+			],
+			[
+				"tot",
+				"total_purchase"
+			],
+			[
 				"var",
-				"var_dump"
+				"var_export"
 			],
 			[
-				"ret",
-				"return"
+				"co",
+				"count"
 			],
 			[
-				"g",
-				"group"
+				"html",
+				"htmlDoc"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"border-co",
+				"border-collapse"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"met",
+				"meta\tTag"
+			],
+			[
+				"h",
+				"h4\tTag"
+			],
+			[
+				"H",
+				"H4\tTag"
+			],
+			[
+				"va",
+				"var"
+			],
+			[
+				"c",
+				"cools"
+			],
+			[
+				"GROU",
+				"groupName"
+			],
+			[
+				"end",
+				"endMerge"
+			],
+			[
+				"start",
+				"startMerge"
+			],
+			[
+				"ro",
+				"row"
+			],
+			[
+				"r",
+				"row"
+			],
+			[
+				"row",
+				"row1"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"functio",
+				"create_function"
+			],
+			[
+				"name",
+				"namespace"
+			],
+			[
+				"fun",
+				"func1"
+			],
+			[
+				"pri",
+				"priv"
+			],
+			[
+				"cm",
+				"cmdOut"
+			],
+			[
+				"in",
+				"index"
+			],
+			[
+				"htm",
+				"htmlDoc"
 			],
 			[
 				"for",
 				"foreach\tforeach …"
 			],
 			[
-				"s",
-				"splice"
-			],
-			[
-				"ti",
-				"timeZoneOffset"
-			],
-			[
 				"l",
-				"log"
+				"li\tTag"
 			],
 			[
-				"cla",
-				"classList"
+				"u",
+				"ul\tTag"
 			],
 			[
-				"re",
-				"remove"
+				"font-si",
+				"font-size-adjust"
 			],
 			[
-				"cl",
-				"classList"
+				"font",
+				"font-weight"
 			],
 			[
-				"fput",
-				"fputs"
+				"bor",
+				"border-left"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"th",
+				"thead\tTag"
+			],
+			[
+				"borde",
+				"border-collapse"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"me",
+				"meta\tTag"
 			],
 			[
 				"ge",
@@ -68,14 +196,6 @@
 				"margin-bottom"
 			],
 			[
-				"back",
-				"background-color"
-			],
-			[
-				"mar",
-				"margin"
-			],
-			[
 				"ma",
 				"margin-bottom"
 			],
@@ -90,6 +210,10 @@
 			[
 				"mo",
 				"modalAdd"
+			],
+			[
+				"ti",
+				"timeout\tsetTimeout function"
 			],
 			[
 				"remove",
@@ -120,20 +244,12 @@
 				"getSpan"
 			],
 			[
-				"in",
-				"input"
-			],
-			[
 				"sum",
 				"sumSale"
 			],
 			[
 				"to",
 				"toFixed"
-			],
-			[
-				"co",
-				"count"
 			],
 			[
 				"su",
@@ -156,6 +272,10 @@
 				"modalGroup"
 			],
 			[
+				"cl",
+				"click"
+			],
+			[
 				"res",
 				"response"
 			],
@@ -164,16 +284,8 @@
 				"img"
 			],
 			[
-				"va",
-				"variable"
-			],
-			[
 				"da",
 				"dataset"
-			],
-			[
-				"fo",
-				"formTools"
 			],
 			[
 				"evt",
@@ -216,10 +328,6 @@
 				"div\tTag"
 			],
 			[
-				"c",
-				"capId"
-			],
-			[
 				"a",
 				"addEventListener"
 			],
@@ -240,10 +348,6 @@
 				"value"
 			],
 			[
-				"fun",
-				"function"
-			],
-			[
 				"log",
 				"login"
 			],
@@ -256,37 +360,10 @@
 	"buffers":
 	[
 		{
-			"file": "index.php",
+			"file": "program_data/profitOfTheGoodsData.php",
 			"settings":
 			{
-				"buffer_size": 1546,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "make_reports/profit_of_the_goods_exel.php",
-			"settings":
-			{
-				"buffer_size": 7538,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "test.php",
-			"settings":
-			{
-				"buffer_size": 1023,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "make_reports/turnover_make_xlsx.php",
-			"settings":
-			{
-				"buffer_size": 14384,
+				"buffer_size": 264,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -300,12 +377,12 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "",
+		"last_filter": "Package Control: ",
 		"selected_items":
 		[
 			[
 				"Package Control: ",
-				"Package Control: List Packages"
+				"Package Control: List Unmanaged Packages"
 			],
 			[
 				"Package Co",
@@ -323,7 +400,6 @@
 		"height": 465.0,
 		"history":
 		[
-			"cl",
 			"clear"
 		]
 	},
@@ -339,43 +415,62 @@
 	"expanded_folders":
 	[
 		"/D/USERS/kds/Documents/DEV/testPHP",
-		"/D/USERS/kds/Documents/DEV/testPHP/make_reports"
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data",
+		"/D/USERS/kds/Documents/DEV/testPHP/reports"
 	],
 	"file_history":
 	[
+		"/D/USERS/kds/Documents/DEV/testPHP/index.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/profit_of_the_goods_exel.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/remains_make_xlsx.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/remains_make_pdf.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/turnover_make_xlsx.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/profitDataSerialize.txt",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/profitOfTheGoodsData.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/profitData.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/.gitignore",
 		"/D/USERS/kds/Documents/DEV/testPHP/testPHP.sublime-project",
-		"/D/USERS/kds/Documents/DEV/lopos/src/js/markup/tools.js",
-		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations__manufacture.js",
-		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/accounting__all-docs.js",
-		"/D/USERS/kds/Documents/DEV/lopos/src/js/markup/reference__contractors-card.js",
-		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/reference__contractors.js",
-		"/D/USERS/kds/Documents/DEV/lopos/src/index.html",
-		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/accounting__reports.js",
-		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/universal-bills-list.js",
-		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/reference__contractors--add.js",
-		"/D/USERS/kds/Documents/DEV/loposReportsPHP/make_reports/turnover_make_xlsx.php",
-		"/D/USERS/kds/Desktop/lopos-master-v1.2.2/lopos-master-3/src/.DS_Store",
-		"/D/USERS/kds/Documents/DEV/lopos2/src/index.html",
-		"/D/USERS/kds/Documents/DEV/loposReportsPHP/turnover_of_the_goods_excel.php",
-		"/D/USERS/kds/Documents/DEV/loposReportsPHP/remains_of_the_goods_excel.php",
-		"/D/USERS/kds/Documents/DEV/loposReportsPHP/turnover_of_the_goods_pdf.php",
-		"/D/USERS/kds/Documents/DEV/loposReportsPHP/remains_of_the_goods_pdf.php",
-		"/D/USERS/kds/Documents/DEV/loposReportsPHP/make_reports/remains_make_pdf.php",
-		"/D/USERS/kds/Documents/DEV/loposReportsPHP/make_reports/remains_make_xlsx.php",
-		"/D/USERS/kds/Documents/DEV/loposReportsPHP/make_reports/turnover_make_pdf.php",
-		"/D/USERS/kds/Documents/DEV/loposReportsPHP/make_reports/markup/remains--make-pdf.php",
-		"/D/USERS/kds/Documents/DEV/loposReportsPHP/make_reports/markup/turnover--make-pdf.php",
-		"/D/USERS/kds/Documents/DEV/loposReportsPHP/report_validate_func.php",
-		"/D/USERS/kds/Documents/DEV/testPHP/turnover.json",
-		"/D/USERS/kds/Documents/DEV/loposReportsPHP/remains_make_xlsx.php",
-		"/D/USERS/kds/Documents/DEV/loposReportsPHP/sftp-config.json",
-		"/D/USERS/kds/Desktop/222/remains_make_xlsx.php",
-		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/markup/naklad--make-pdf.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/nakladData.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/naklad_make_pdf.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/html.html",
+		"/C/Users/kds/AppData/Local/Temp/_dc1779929014/naklad_excel.php",
+		"/C/Users/kds/AppData/Local/Temp/_dc1635632719/naklad_pdf.php",
 		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
-		"/D/USERS/kds/Documents/DEV/testPHP/remains_make_xlsx.php",
+		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/SublimeTextXdebug-master/Xdebug.sublime-settings",
+		"/D/USERS/kds/Documents/DEV/testPHP/test.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/turnover_make_pdf.php",
+		"/C/Users/kds/AppData/Local/Temp/7zO4931128A/sheet1.xml",
+		"/D/USERS/kds/Desktop/test1/xl/_rels/workbook.xml.rels",
+		"/D/USERS/kds/Desktop/test1/xl/worksheets/sheet1.xml",
+		"/D/USERS/kds/Desktop/test1/_rels/.rels",
+		"/D/USERS/kds/Desktop/test1/xl/workbook.xml",
+		"/D/USERS/kds/Desktop/test1/docProps/app.xml",
+		"/D/USERS/kds/Desktop/test1/docProps/core.xml",
+		"/D/USERS/kds/Desktop/test1/xl/styles.xml",
+		"/D/USERS/kds/Desktop/test1/[Content_Types].xml",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/external_scripts/xlsxwriter.class.php",
+		"/D/USERS/kds/Desktop/Turnover_07_04_3905.pdf.html",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/temp/html.html",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/turnoverData.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/markup/remains--make-pdf.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/markup/turnover--make-pdf.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/remainsData.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/Turnover_data.txt",
+		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/SublimeTextXdebug/Xdebug.sublime-settings",
 		"/D/USERS/kds/Documents/DEV/testPHP/sftp-config.json",
+		"/D/USERS/kds/Documents/DEV/testPHP/remains_make_xlsx.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/remains_make_pdf.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/markup/remains--make-pdf.php",
+		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/D/USERS/kds/Documents/DEV/testPHP/markup/remains--makepdf-header.php",
+		"/D/USERS/kds/Desktop/html.html",
+		"/D/USERS/kds/Documents/DEV/testPHP/ftp",
 		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations__sale.js",
 		"/D/USERS/kds/Documents/DEV/lopos/src/js/main.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/index.html",
 		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations__inventory.js",
 		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/catalog__cards.js",
 		"/D/USERS/kds/Documents/DEV/lopos/src/js/markup/catalog-cards.js",
@@ -386,6 +481,7 @@
 		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations--right-column.js",
 		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations--header.js",
 		"/D/USERS/kds/Documents/DEV/lopos/src/js/buttons/operations--server-tools.js",
+		"/D/USERS/kds/Documents/DEV/lopos/src/js/markup/tools.js",
 		"/D/USERS/kds/Documents/DEV/lopos/src/js-external/settings.js",
 		"/D/USERS/kds/Documents/DEV/lopos/src/js/tools/storage.js",
 		"/D/USERS/kds/Documents/DEV/lopos/src/js/markup/operation__trade.js",
@@ -452,29 +548,11 @@
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID/login.txt",
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/settings/settings.js",
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/js/login.js",
-		"/D/USERS/kds/Desktop/captcha.html",
-		"/D/USERS/kds/Desktop/invcaptcha.html",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/reCaptcha.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/login.html",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/build/index.html",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/xhr.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/test.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/settings.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/README.md",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/gulpfile.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/xch.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/js/xhr.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/js/script.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID_START_TEST/build/js/xhr.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/css/README.md",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/sass/README.md",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/.babelrc",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js-external/README.md",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/README.md"
+		"/D/USERS/kds/Desktop/captcha.html"
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 42.0
 	},
 	"find_in_files":
 	{
@@ -485,16 +563,250 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"good",
+			"calcProfitAndRent",
+			"cmpRent",
+			"cmpName",
+			"drawStock",
+			"drawBusiness",
+			"drawLogo",
+			"<?",
+			"date",
+			"data",
+			"<?",
+			"writeFile",
+			"\n    ",
+			"</b>",
+			"<b>",
+			"b",
+			"caption",
+			"markMergedCell",
+			"number_format",
+			"@",
+			"number_format",
+			"(float) $row['st_count']",
+			" , 2, ',', ''",
+			"number_format",
+			"@",
+			"0",
+			"'@'",
+			"#,##0",
+			"@",
+			"thin",
+			"var",
+			"totalGrp",
+			"rowPar",
+			" rowPar",
+			"grpTotal",
+			"markupGroupTotal",
+			"markupTotal",
+			"th",
+			";\n",
+			"\"subtotal-col",
+			"\\",
+			"drawTotal",
+			"total",
+			"th",
+			"drawTableHeader",
+			"tbody",
+			"tdbody",
+			"tbody",
+			"th",
+			"exec",
+			"drawGroupTotal",
+			"calcGroupTotal",
+			"par_count",
+			"drawRow",
+			"$row2",
+			"row2",
+			"]",
+			"[",
+			"}",
+			"{",
+			"\\",
+			"\\n",
+			"\\",
+			"\\n",
+			"\\",
+			"writeFile",
+			"date",
+			"var_dump",
+			"var",
+			"drawR",
+			"draw",
+			"calcTotal",
+			"th",
+			"calcVariableCol",
+			"'",
+			"14px",
+			"12px",
+			"10px",
+			"12px",
+			"drawGro",
+			"Hea",
+			"console",
+			"cons",
+			"operation-inventory-search",
+			"operations-inventory-search-barcode",
+			"getD",
+			"otLeftColumn",
+			"ИНВЕН",
+			"HEAD",
+			"ЗАКУПКА",
+			"закупка",
+			"ПОСТУП",
+			"ЗАКУПКА",
+			"HEAD",
+			"inventoryForm",
+			"conso",
+			"tradeSubmitFormCallback",
+			"inventoryForm",
+			"searchBarcodeFormBarcode",
+			"addGoodToNomCard",
+			"clickLeftGoodsCallback",
+			"getGoodsCallback",
+			"clickGroupsCallback",
+			"getDataCallback",
+			"inventoryFormSubmit",
+			"inventoryFormStock",
+			"tradeForm",
+			"tradeForm.delivery",
+			"tradeForm.kontragents",
+			"tradeForm",
+			"tradeForm.submit",
+			"tradeForm",
+			"tradeForm.stock",
+			"tradeForm",
+			"searchBarcodeForm.barcode",
+			"searchBarcodeForm",
+			"getData",
+			"inventoryForm",
+			"inventoryForm.kontragents",
+			"inventoryForm",
+			"inventoryForm.submit",
+			"inventoryForm",
+			"inventoryForm.stock.value",
+			"inventoryForm",
+			"searchBarcodeForm.barcode",
+			"searchBarcodeForm",
+			"ИНВЕНТ",
+			"searchBarcodeForm"
 		],
 		"highlight": false,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
+			"invoice",
+			"callbackCmpRent",
+			"callbackCmpName",
+			"</span>",
+			"<span class=\"bold\">",
+			"span",
+			"header",
+			"GENERAL",
+			"(float) $row['st_count'], 2",
+			"",
+			"round",
+			"GENERAL",
+			"0",
+			"@",
+			"#,##0",
+			"thick",
+			"total",
+			"td",
+			"\"subtotal-col\"",
+			"/",
+			"td",
+			"$endColumnLen",
+			"$row2Start",
+			"row2Start",
+			"",
+			"]",
+			"[",
+			"",
+			"\\r\\n",
+			"\\n\\r",
+			"",
+			"td",
+			"\"",
+			"16px",
+			"14px",
+			"12px",
+			"14px",
+			"tradeFormDelivery",
+			"tradeFormKontragents",
+			"tradeFormSubmit",
+			"tradeFormStock",
+			"searchBarcodeFormBarcode",
+			"inventoryFormKontragents",
+			"inventoryFormSubmit",
+			"inventoryFormStock",
+			"searchBarcodeFormBarcode",
+			"tradeFormDelivery",
+			"tradeFormKontragents",
+			"tradeFormStock",
+			"tradeFormSubmit.disabled",
+			"align-middle",
+			"priceSell",
+			"newPriceSell",
+			"modalGoodsAdd",
+			"operationsModalAdd",
+			"modalAdd",
+			"leftColumn",
+			"appHeader.setKontragentList",
+			"operationsTradeHeader.setKontragentList",
+			"operationsHeader",
+			"tfootNodeSale",
+			"tbodyNodeSale",
+			"priceNodeSale",
+			"tableNodeSale",
+			"saleSubmit",
+			"leftColumn",
+			"coolSaleHeader",
+			"leftSaleColumn",
+			"rightColumn",
+			"serverTools",
+			"operations-purchase",
+			"response",
+			"name",
+			"priceBlock",
+			"express-modal",
+			"forEach",
+			"el",
+			"formEditKeywords",
+			"validMessages",
+			"messages",
+			"showAlert",
+			"formEditPoint",
+			"points-edit",
+			"points-add",
+			"formAddPoint",
+			"enterprisesButtonFormAdd",
+			"enterprisesCarEedit",
+			"querySelector",
+			"validPassword",
+			"validEmail",
+			"validId",
+			"regApi",
+			"regVal",
+			"regValSet",
+			"regSet",
+			"setLoginInputPasswordError",
+			"setLoginInputLoginError",
+			"userLogin",
+			"userPassword",
+			"userLogin",
+			"alert",
+			"Settings.xhrSettings",
+			"sessionStorage",
+			"'",
+			",",
+			"getItem"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -505,32 +817,29 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.php",
+					"file": "program_data/profitOfTheGoodsData.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1546,
+						"buffer_size": 264,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1461,
-								1461
+								257,
+								257
 							]
 						],
 						"settings":
 						{
-							"SL.14.region_keys":
-							[
-							],
-							"SL.32.region_keys":
+							"SL.66.region_keys":
 							[
 								"sublime_linter.protected_regions"
 							],
@@ -545,152 +854,27 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 308.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "make_reports/profit_of_the_goods_exel.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7538,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3137,
-								3137
-							]
-						],
-						"settings":
-						{
-							"SL.15.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.34.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1716.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "test.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1023,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								995,
-								995
-							]
-						],
-						"settings":
-						{
-							"SL.16.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.36.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 474.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "make_reports/turnover_make_xlsx.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14384,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4076,
-								4979
-							]
-						],
-						"settings":
-						{
-							"SL.17.region_keys":
-							[
-							],
-							"SL.35.region_keys":
-							[
-							],
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 330.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
 				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 30.0
+		"height": 32.0
 	},
 	"input":
 	{
-		"height": 43.0
+		"height": 44.0
 	},
 	"layout":
 	{
@@ -701,11 +885,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.552535118325,
 			1.0
 		],
 		"rows":
@@ -714,10 +905,18 @@
 			1.0
 		]
 	},
-	"menu_visible": false,
+	"menu_visible": true,
 	"output.SublimeLinter":
 	{
 		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 34.0
+	},
+	"output.exec":
+	{
+		"height": 144.0
 	},
 	"output.find_results":
 	{
@@ -725,17 +924,21 @@
 	},
 	"output.sftp":
 	{
-		"height": 145.0
+		"height": 265.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 593.0
 	},
 	"output.xdebug":
 	{
-		"height": 145.0
+		"height": 144.0
 	},
 	"pinned_build_system": "",
 	"project": "testPHP.sublime-project",
 	"replace":
 	{
-		"height": 56.0
+		"height": 75.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -773,25 +976,10 @@
 			"hide_conflict": false,
 			"restore_index":
 			{
-				"14":
+				"19":
 				{
 					"group": 0,
 					"index": 0
-				},
-				"15":
-				{
-					"group": 0,
-					"index": 1
-				},
-				"16":
-				{
-					"group": 0,
-					"index": 2
-				},
-				"17":
-				{
-					"group": 0,
-					"index": 3
 				}
 			},
 			"restore_layout":
@@ -803,11 +991,18 @@
 						0,
 						1,
 						1
+					],
+					[
+						1,
+						0,
+						2,
+						1
 					]
 				],
 				"cols":
 				[
 					0.0,
+					0.588599752169,
 					1.0
 				],
 				"rows":
@@ -822,7 +1017,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 314.0,
+	"side_bar_width": 235.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
