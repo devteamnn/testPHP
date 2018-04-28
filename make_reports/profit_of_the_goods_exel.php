@@ -376,14 +376,14 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
   }
 
   function callbackCmpRent($a, $b) {
-    $a = (double) $a;
-    $b = (double) $b;
+    $a['rent'] = (double) $a['rent'];
+    $b['rent'] = (double) $b['rent'];
 
-    if ($a == $b) {
+    if ($a['rent'] == $b['rent']) {
       return 0;
     }
 
-    return ($a < $b) ? -1 : 1;
+    return ($a['rent'] < $b['rent']) ? -1 : 1;
   }
 
   function calcProfitAndRent(&$goodsForGrp) {
