@@ -360,12 +360,30 @@
 	"buffers":
 	[
 		{
-			"file": "program_data/profitOfTheGoodsData.php",
+			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 264,
+				"buffer_size": 2019,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "make_reports/profit_of_the_goods_exel.php",
+			"settings":
+			{
+				"buffer_size": 13633,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "make_reports/remains_make_xlsx.php",
+			"settings":
+			{
+				"buffer_size": 15219,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -416,32 +434,31 @@
 	[
 		"/D/USERS/kds/Documents/DEV/testPHP",
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports",
-		"/D/USERS/kds/Documents/DEV/testPHP/program_data",
-		"/D/USERS/kds/Documents/DEV/testPHP/reports"
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/external_scripts"
 	],
 	"file_history":
 	[
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/turnover_make_pdf.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/html.html",
+		"/D/USERS/kds/Documents/DEV/testPHP/program_data/profitOfTheGoodsData.php",
+		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/naklad_make_pdf.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/index.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/profit_of_the_goods_exel.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/remains_make_xlsx.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/remains_make_pdf.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/turnover_make_xlsx.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/program_data/profitDataSerialize.txt",
-		"/D/USERS/kds/Documents/DEV/testPHP/program_data/profitOfTheGoodsData.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/program_data/profitData.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/.gitignore",
 		"/D/USERS/kds/Documents/DEV/testPHP/testPHP.sublime-project",
 		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/markup/naklad--make-pdf.php",
 		"/D/USERS/kds/Documents/DEV/testPHP/program_data/nakladData.php",
-		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/naklad_make_pdf.php",
-		"/D/USERS/kds/Documents/DEV/testPHP/html.html",
 		"/C/Users/kds/AppData/Local/Temp/_dc1779929014/naklad_excel.php",
 		"/C/Users/kds/AppData/Local/Temp/_dc1635632719/naklad_pdf.php",
 		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
 		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
 		"/C/Users/kds/AppData/Roaming/Sublime Text 3/Packages/SublimeTextXdebug-master/Xdebug.sublime-settings",
 		"/D/USERS/kds/Documents/DEV/testPHP/test.php",
-		"/D/USERS/kds/Documents/DEV/testPHP/make_reports/turnover_make_pdf.php",
 		"/C/Users/kds/AppData/Local/Temp/7zO4931128A/sheet1.xml",
 		"/D/USERS/kds/Desktop/test1/xl/_rels/workbook.xml.rels",
 		"/D/USERS/kds/Desktop/test1/xl/worksheets/sheet1.xml",
@@ -566,6 +583,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"wkht",
 			"good",
 			"calcProfitAndRent",
 			"cmpRent",
@@ -692,8 +710,7 @@
 			"inventoryForm",
 			"searchBarcodeForm.barcode",
 			"searchBarcodeForm",
-			"ИНВЕНТ",
-			"searchBarcodeForm"
+			"ИНВЕНТ"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -822,27 +839,107 @@
 			[
 				{
 					"buffer": 0,
-					"file": "program_data/profitOfTheGoodsData.php",
+					"file": "index.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 264,
+						"buffer_size": 2019,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								1965,
+								1965
+							]
+						],
+						"settings":
+						{
+							"SL.23.region_keys":
+							[
+							],
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 900.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "make_reports/profit_of_the_goods_exel.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13633,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								257,
-								257
+								13509,
+								13509
 							]
 						],
 						"settings":
 						{
-							"SL.66.region_keys":
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7800.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "make_reports/remains_make_xlsx.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 15219,
+						"regions":
+						{
+						},
+						"selection":
+						[
 							[
-								"sublime_linter.protected_regions"
-							],
+								0,
+								0
+							]
+						],
+						"settings":
+						{
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
 							"incomplete_sync": null,
@@ -857,14 +954,9 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
-			]
-		},
-		{
-			"sheets":
-			[
 			]
 		}
 	],
@@ -885,18 +977,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.552535118325,
 			1.0
 		],
 		"rows":
@@ -976,10 +1061,25 @@
 			"hide_conflict": false,
 			"restore_index":
 			{
-				"19":
+				"15":
 				{
 					"group": 0,
 					"index": 0
+				},
+				"23":
+				{
+					"group": 0,
+					"index": 1
+				},
+				"26":
+				{
+					"group": 0,
+					"index": 3
+				},
+				"29":
+				{
+					"group": 0,
+					"index": 2
 				}
 			},
 			"restore_layout":
@@ -991,18 +1091,11 @@
 						0,
 						1,
 						1
-					],
-					[
-						1,
-						0,
-						2,
-						1
 					]
 				],
 				"cols":
 				[
 					0.0,
-					0.588599752169,
 					1.0
 				],
 				"rows":

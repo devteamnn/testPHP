@@ -3,8 +3,7 @@ namespace nameSpaceNakladMakePdf;;
 
 require_once 'markup/naklad--make-pdf.php';
 
-// $command = 'wkhtmltopdf --encoding utf-8 ';
-$command = 'make_reports/external_scripts/wkhtmltox/bin/wkhtmltopdf --encoding utf-8 ';
+$command = 'wkhtmltopdf --encoding utf-8 ';
 
 function drawHeader(&$data) {
   $business = (isset($data['name_business'])) ? $data['name_business'] : '';
@@ -39,11 +38,8 @@ function drawTotal(&$data) {
 function writeFile($name, $directory, &$htmlCode) {
   global $command;
 
-  // $tmpName = 'users/' . $directory . '/reports/' . $name . '.html';
-  $tmpName = 'reports/' . $name . '.html';
-
-  // $fileName = 'users/' . $directory . '/reports/' . $name;
-  $fileName = 'reports/' . $name;
+  $tmpName = 'users/' . $directory . '/reports/' . $name . '.html';
+  $fileName = 'users/' . $directory . '/reports/' . $name;
 
   $file = fopen($tmpName, 'w+');
   fputs($file, $htmlCode);

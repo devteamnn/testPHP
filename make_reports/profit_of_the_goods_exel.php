@@ -418,8 +418,7 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
     drawTotal($writer, $total);
 
     $name = getFileName('ProfitGoods', 'xlsx');
-    // $fileName = 'users/' . $directory . '/reports/' . $name;
-    $fileName = 'reports/' . $name;
+    $fileName = 'users/' . $directory . '/reports/' . $name;
 
     $writer->writeToFile($fileName);
 
