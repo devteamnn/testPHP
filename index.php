@@ -38,6 +38,7 @@
   require_once 'make_reports/naklad_make_pdf.php';
 
   require_once 'make_reports/profit_of_the_goods_exel.php';
+  require_once 'make_reports/profit_of_the_goods_pdf.php';
 
   $dir = 'dir';
 
@@ -65,10 +66,14 @@
 
   // --------- PROFIT OF THE GOODS ---------
 
-  $par = '[p01,p03]';
+  $par = '[,p02]';
 
   $data = profitGetData();
-  $res = nameSpaceProfitOfTheGoodsMakeXlsx\profitOfTheGoodsMakeXlsx($data, $dir, $par);
+  // $res = nameSpaceProfitOfTheGoodsMakeXlsx\profitOfTheGoodsMakeXlsx($data, $dir, $par);
+
+  $res = nameSpaceProfitOfTheGoodsMakePdf\profitOfTheGoodsMakePdf($data, $dir, $par);
+
+
 
 // ------------------------------------------------------------
   printData($res);

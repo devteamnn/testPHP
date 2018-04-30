@@ -9,7 +9,7 @@
   {
       "xdebug": {
           "path_mapping": {
-            "/var/www/html/": "D:/USERS/kds/Documents/DEV/testPHP/",
+            "/var/www/html/": "/home/kds/Документы/DEV/testPHP",
           },
           "url": "http://192.168.56.10/index.php",
           "super_globals": true,

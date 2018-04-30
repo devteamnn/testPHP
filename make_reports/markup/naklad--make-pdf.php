@@ -78,7 +78,6 @@ function markupDrawDocHeader(){
     </head>
     <body>
 EOL;
-
 }
 
 function markupDrawHeader($busName, $stName, $KAName, $time, $nakId) {
