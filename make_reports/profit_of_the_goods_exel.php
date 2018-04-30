@@ -98,6 +98,8 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
       'totalSell' => 0,
       'profit' => 0];
 
+      $goodNum = 1;
+
       foreach ($data['content'] as $group) {
 
         calcProfitAndRent($group);
@@ -118,7 +120,7 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
 
         drawGroupName($writer, $group['group_name']);
 
-        foreach ($group['group_content'] as $key => $good) {
+        foreach ($group['group_content'] as $good) {
 
           $goodCount = (isset($good['good_count'])) ? $good['good_count'] : 0;
           $totalPrch = (isset($good['total_purchase'])) ? $good['total_purchase'] : 0;
@@ -129,7 +131,9 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
           $groupTotal['totalSell'] = round($groupTotal['totalSell'] + $totalSell, 2);
           $groupTotal['profit'] = round($groupTotal['profit'] + $good['profit'], 2);
 
-          drawGood($writer, $good, $key + 1, validate_parametr($par, 'p01'));
+          drawGood($writer, $good, $goodNum, validate_parametr($par, 'p01'));
+
+          $goodNum++;
         }
 
         drawGroupTotal($writer, $groupTotal);
@@ -383,7 +387,7 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
       return 0;
     }
 
-    return ($a['rent'] < $b['rent']) ? -1 : 1;
+    return ($a['rent'] > $b['rent']) ? -1 : 1;
   }
 
   function calcProfitAndRent(&$goodsForGrp) {
