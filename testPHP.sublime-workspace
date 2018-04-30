@@ -359,16 +359,7 @@
 			"file": "make_reports/profit_of_the_goods_pdf.php",
 			"settings":
 			{
-				"buffer_size": 6919,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "make_reports/markup/profit_of_the_goods--make-pdf.php",
-			"settings":
-			{
-				"buffer_size": 4622,
+				"buffer_size": 6948,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -383,10 +374,10 @@
 			}
 		},
 		{
-			"file": "make_reports/remains_make_pdf.php",
+			"file": "make_reports/profit_of_the_goods_exel.php",
 			"settings":
 			{
-				"buffer_size": 8875,
+				"buffer_size": 13733,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -443,6 +434,8 @@
 	],
 	"file_history":
 	[
+		"/home/kds/Документы/DEV/testPHP/make_reports/markup/profit_of_the_goods--make-pdf.php",
+		"/home/kds/Документы/DEV/testPHP/make_reports/remains_make_pdf.php",
 		"/home/kds/Документы/DEV/testPHP/make_reports/markup/turnover--make-pdf.php",
 		"/home/kds/Документы/DEV/testPHP/make_reports/profit_of_the_goods_exel.php",
 		"/home/kds/Документы/DEV/testPHP/testPHP.sublime-project",
@@ -568,9 +561,7 @@
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/js-external/settings.js",
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/form_login.js",
 		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/form_forgot.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/form_confirm_email.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/tools/captcha.js",
-		"/D/USERS/kds/Documents/DEV/LOPOS-ID/login.txt"
+		"/D/USERS/kds/Documents/DEV/LOPOS-ID/src/js/login/form_confirm_email.js"
 	],
 	"find":
 	{
@@ -838,7 +829,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -847,32 +838,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6919,
+						"buffer_size": 6948,
 						"regions":
 						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "bookmark",
-								"regions":
-								[
-									[
-										1907,
-										1907
-									],
-									[
-										4655,
-										4655
-									]
-								],
-								"scope": "bookmarks"
-							}
 						},
 						"selection":
 						[
 							[
-								164,
-								164
+								3747,
+								3747
 							]
 						],
 						"settings":
@@ -885,64 +859,29 @@
 							[
 								"sublime_linter.protected_regions"
 							],
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"incomplete_sync": null,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 315.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "make_reports/markup/profit_of_the_goods--make-pdf.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4622,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1227,
-								1227
-							]
-						],
-						"settings":
-						{
-							"SL.16.region_keys":
-							[
-							],
-							"SL.21.region_keys":
+							"SL.45.region_keys":
 							[
 								"sublime_linter.protected_regions"
 							],
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
 							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1125.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "index.php",
 					"semi_transient": false,
 					"settings":
@@ -954,8 +893,8 @@
 						"selection":
 						[
 							[
-								2170,
-								2170
+								2062,
+								2062
 							]
 						],
 						"settings":
@@ -963,43 +902,7 @@
 							"SL.23.region_keys":
 							[
 							],
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 720.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "make_reports/remains_make_pdf.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8875,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3409,
-								3409
-							]
-						],
-						"settings":
-						{
-							"SL.48.region_keys":
+							"SL.47.region_keys":
 							[
 							],
 							"editorconfig": true,
@@ -1013,10 +916,50 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1508.0,
+						"translation.y": 705.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "make_reports/profit_of_the_goods_exel.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13733,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3201,
+								3208
+							]
+						],
+						"settings":
+						{
+							"SL.52.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

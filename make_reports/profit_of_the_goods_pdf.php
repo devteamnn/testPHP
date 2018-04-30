@@ -22,6 +22,8 @@ function drawData($data, $par) {
     'totalSell' => 0,
     'profit' => 0];
 
+  $goodNum = 1;
+
   foreach ($data['content'] as $group) {
 
     calcProfitAndRent($group);
@@ -42,8 +44,6 @@ function drawData($data, $par) {
 
     $htmlDoc .= markupDrawGroup($group['group_name']);
 
-    $key = 1;
-
     foreach ($group['group_content'] as $good) {
 
       $goodCount = (isset($good['good_count'])) ? $good['good_count'] : 0;
@@ -55,10 +55,9 @@ function drawData($data, $par) {
       $groupTotal['totalSell'] = round($groupTotal['totalSell'] + $totalSell, 2);
       $groupTotal['profit'] = round($groupTotal['profit'] + $good['profit'], 2);
 
-      $retRow = drawGood($good, $key, validate_parametr($par, 'p01'));
-      $htmlDoc .= $retRow['row'];
+      $htmlDoc .= drawGood($good, $goodNum, validate_parametr($par, 'p01'));
 
-      $key = $retRow['key'];
+      $goodNum++;
     }
 
     $htmlDoc .=  markupDrawGroupTotal($groupTotal['count'], $groupTotal['totalPurchase'], $groupTotal['totalSell'], $groupTotal['profit']);
@@ -122,7 +121,7 @@ function callbackCmpRent($a, $b) {
     return 0;
   }
 
-  return ($a['rent'] < $b['rent']) ? -1 : 1;
+  return ($a['rent'] > $b['rent']) ? -1 : 1;
 }
 
 function drawGood($good, $key, $ext) {
