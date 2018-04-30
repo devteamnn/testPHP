@@ -42,7 +42,9 @@ function drawData($data, $par) {
 
     $htmlDoc .= markupDrawGroup($group['group_name']);
 
-    foreach ($group['group_content'] as $key => $good) {
+    $key = 1;
+
+    foreach ($group['group_content'] as $good) {
 
       $goodCount = (isset($good['good_count'])) ? $good['good_count'] : 0;
       $totalPrch = (isset($good['total_purchase'])) ? $good['total_purchase'] : 0;
@@ -53,7 +55,10 @@ function drawData($data, $par) {
       $groupTotal['totalSell'] = round($groupTotal['totalSell'] + $totalSell, 2);
       $groupTotal['profit'] = round($groupTotal['profit'] + $good['profit'], 2);
 
-      $htmlDoc .= drawGood($good, $key + 1, validate_parametr($par, 'p01'));
+      $retRow = drawGood($good, $key, validate_parametr($par, 'p01'));
+      $htmlDoc .= $retRow['row'];
+
+      $key = $retRow['key'];
     }
 
     $htmlDoc .=  markupDrawGroupTotal($groupTotal['count'], $groupTotal['totalPurchase'], $groupTotal['totalSell'], $groupTotal['profit']);
@@ -140,14 +145,20 @@ function drawGood($good, $key, $ext) {
   $row .= '<td>' . $good['rent'] . '</td>';
   $row .= '</tr>';
 
+  $key++;
+
   if ($ext) {
-    $row .= drawInvoice($good['naklads']);;
+
+    $retRow = drawInvoice($key, $good['naklads']);
+    $row .= $retRow['row'];
+
+    return ['row' => $row, 'key' => $retRow['key']];
   }
 
-  return $row;
+  return ['row' => $row, 'key' => $key];
 }
 
-function drawInvoice(&$invoice) {
+function drawInvoice($key, &$invoice) {
   $row = '';
 
   foreach ($invoice as $value) {
@@ -163,7 +174,7 @@ function drawInvoice(&$invoice) {
       round((float) $value['total_sell'], 2) : '';
 
     $row .= '<tr>';
-    $row .= '<td></td>';
+    $row .= '<td>' . $key . '</td>';
     $row .= '<td></td>';
     $row .= '<td class="invoice">Накладная № ' . $value['naklad'] . '</td>';
     $row .= '<td>' . $cnt . '</td>';
@@ -174,9 +185,11 @@ function drawInvoice(&$invoice) {
     $row .= '<td></td>';
     $row .= '<td></td>';
     $row .= '</tr>';
+
+    $key++;
   }
 
-  return $row;
+  return ['row' => $row, 'key' => $key];
 }
 
 function getFileName($prefix, $type) {

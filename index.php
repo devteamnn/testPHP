@@ -66,12 +66,12 @@
 
   // --------- PROFIT OF THE GOODS ---------
 
-  $par = '[,p02]';
+  $par = '[p01,p02]';
 
   $data = profitGetData();
-  // $res = nameSpaceProfitOfTheGoodsMakeXlsx\profitOfTheGoodsMakeXlsx($data, $dir, $par);
+  $res = nameSpaceProfitOfTheGoodsMakeXlsx\profitOfTheGoodsMakeXlsx($data, $dir, $par);
 
-  $res = nameSpaceProfitOfTheGoodsMakePdf\profitOfTheGoodsMakePdf($data, $dir, $par);
+  // $res = nameSpaceProfitOfTheGoodsMakePdf\profitOfTheGoodsMakePdf($data, $dir, $par);
 
 
 

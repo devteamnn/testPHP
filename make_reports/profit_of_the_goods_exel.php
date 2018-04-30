@@ -118,7 +118,9 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
 
         drawGroupName($writer, $group['group_name']);
 
-        foreach ($group['group_content'] as $key => $good) {
+        $key = 1;
+
+        foreach ($group['group_content'] as $good) {
 
           $goodCount = (isset($good['good_count'])) ? $good['good_count'] : 0;
           $totalPrch = (isset($good['total_purchase'])) ? $good['total_purchase'] : 0;
@@ -129,7 +131,7 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
           $groupTotal['totalSell'] = round($groupTotal['totalSell'] + $totalSell, 2);
           $groupTotal['profit'] = round($groupTotal['profit'] + $good['profit'], 2);
 
-          drawGood($writer, $good, $key + 1, validate_parametr($par, 'p01'));
+          $key = drawGood($writer, $good, $key, validate_parametr($par, 'p01'));
         }
 
         drawGroupTotal($writer, $groupTotal);
@@ -274,12 +276,16 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
 
     $writer->writeSheetRow('Sheet1', $cools, $rowOptions);
 
+    $key++;
+
     if ($ext) {
-      drawInvoice($writer, $good['naklads']);
+      return drawInvoice($writer, $key, $good['naklads']);
     }
+
+    return $key;
   }
 
-  function drawInvoice(&$writer, &$invoice) {
+  function drawInvoice(&$writer, $key, &$invoice) {
     $rowOptions = [];
 
     for ($i = 0; $i < 10; $i++) {
@@ -296,7 +302,7 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
     }
 
     foreach ($invoice as $value) {
-      $cools = ['', '', 'Накладная № ' . $value['naklad'],
+      $cools = [$key, '', 'Накладная № ' . $value['naklad'],
       (isset($value['good_count'])) ?
         round((float) $value['good_count'], 2) : '',
       (isset($value['price_purchase'])) ?
@@ -309,8 +315,12 @@ namespace nameSpaceProfitOfTheGoodsMakeXlsx {
         round((float) $value['total_sell'], 2) : '',
       '', ''];
 
-    $writer->writeSheetRow('Sheet1', $cools, $rowOptions);
+      $writer->writeSheetRow('Sheet1', $cools, $rowOptions);
+
+      $key++;
     }
+
+    return $key;
   }
 
   function drawGroupTotal(&$writer, &$groupTotal) {
